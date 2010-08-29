@@ -1,9 +1,6 @@
-See http://www.borfast.com/projects/arris-tm602a-password-of-the-day-generator for more information.
+-=[ Description ]=-
 
 This is a "password of the day" generator for Arris TM602A cable modems (and probably other Arris models).
-
-
--=[ Description ]=-
 
 I created this because a couple of months ago my cable modem died on me and my ISP, Cabovisão (if you're in Portugal, I highly recommend them), brought me a new one: an Arris TM602A.
 
@@ -11,19 +8,19 @@ As usual when I receive a new technological gadget, I had to explore it. The web
 
 A bit of googling provided the answers I needed: a couple of pages with a list of passwords of the day (this device has a different password every day) and a page with a password generator (for the TM501A model but seems to work fine for the TM602A).
 
-That gave me access to the protected page but I didn't want to have to resort to a couple of pages every time I wanted to access my modem's protected page. Besides, I didn't know how long the pages would last (they're both forum posts). The password generator was no solution either, because it's written for .NET and Mono wasn't able to execute it properly.
+That gave me access to the protected page but I didn't want to have to resort to a couple of pages every time I wanted to access my modem's protected page. Besides, I didn't know how long the pages would last (they're both forum posts). The password generator was no solution either, because it's written for .NET, Mono isn't able to execute it properly and I'm obviously not going to boot Windows just because of this.
 
 So I brought the matter into my own hands I wrote my own password generator.
+
+Github repository: http://github.com/borfast/arrispwgen
+See http://www.borfast.com/projects/arris-tm602a-password-of-the-day-generator for more information.
 
 
 -=[ How to use ]=-
 
 For now the generator is implemented as a bookmarklet, on which you can click to obtain the password for the current day.
-Just go to the project's Github repository and drag the link to the "bookmarklet.js" file onto your browsers bookmarks tool.
-Github repository: http://github.com/borfast/arrispwgen
-
+As with any bookmarklet, you simply need to drag a link - in this case, this link - onto your browsers bookmarks tool and click the bookmark whenever you want to use it.
 
 -=[ Disclaimer ]=-
 
 Please note that I did this mostly for fun and not for profit of any kind, nor does this open up anything private or dangerous to the world. Unlike with the Scientific Atlanta Webstar 2203c, which allowed a little bit of fiddling with the modem's configuration, the Arris TM602A does not allow any modifications to the configuration at all - all it allows is to enable or disable a couple of logs, and run some diagnostic tests. In other words, this tool does not provide access to any secret information or allow you to do any malicious actions by itself. You do need to be aware if you are breaking any laws or contracts if you use it, though.
-

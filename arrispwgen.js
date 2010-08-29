@@ -157,7 +157,7 @@ function GenArrisPasswords(startdate, enddate) {
       password_of_the_day = password_of_the_day.join('');
 
       // TODO: Should this be presented in an overlay on the current page?
-      alert(password_of_the_day);
+      alert('Arris cable modem password of the day: ' + password_of_the_day);
     }
   }
 }
