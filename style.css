@@ -43,6 +43,7 @@ body, button, input, select, textarea {
 #password-list {
 	width: 500px;
 	margin: auto;
+	margin-top: 20px;
 	border-spacing: 0;
 }
 
@@ -68,4 +69,9 @@ td:first-child {
 	margin: 15px;
 	font-size: 24px;
 	padding: 10px;
+}
+
+#footer {
+	text-align: center;
+	margin: 35px;
 }
