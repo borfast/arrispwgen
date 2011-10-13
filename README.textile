@@ -21,7 +21,7 @@ h2. How to use
 
 You have two options:
 
-# Use the "bookmarklet":http://borfast.github.com/arrispwgen/bookmarklet.js, on which you can click to obtain the password for the current day. As with any bookmarklet, you simply need to drag it into your browser's bookmarks and click on it whenever you want to use it.
+# Use the "bookmarklet":http://borfast.github.com/arrispwgen/bookmarklet.html, on which you can click to obtain the password for the current day. As with any bookmarklet, you simply need to drag it into your browser's bookmarks and click on it whenever you want to use it.
 # Use the "web page":http://borfast.github.com/arrispwgen/ to generate one or more passwords.
 
 h2. Disclaimer
