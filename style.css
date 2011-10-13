@@ -1,0 +1,71 @@
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.231;
+}
+
+body, button, input, select, textarea {
+	font-family: sans-serif;
+	color: #222;
+}
+
+#container {
+	width: 960px;
+	margin: auto;
+}
+
+#header h1 {
+	width: 100%;
+	text-align: center;
+}
+
+#start-date {
+	float: left;
+	width: 45%;
+	font-size: 18px;
+}
+
+#end-date {
+	float: right;
+	width: 45%;
+	font-size: 18px;
+}
+
+#password-list {
+	width: 500px;
+	margin: auto;
+	border-spacing: 0;
+}
+
+th:first-child {
+	border-right: 2px solid grey;
+}
+th {
+	width: 50%;
+	border-bottom: 2px solid gray;
+	margin: 0;
+	padding: 8px;
+}
+
+td {
+	border-bottom: 2px solid gray;
+	padding: 8px;
+}
+td:first-child {
+	border-right: 2px solid gray;
+}
+
+#go {
+	margin: 15px;
+	font-size: 24px;
+	padding: 10px;
+}
