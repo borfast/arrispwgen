@@ -38,8 +38,6 @@ function GenArrisPasswords(startdate, enddate) {
 	var one_day_in_milliseconds = 24 * 60 * 60 * 1000; // 1 day in milliseconds
 
 	// Check how many passwords we're going to generate.
-	// TODO: Use arguments[] instead, since it also allows for checking if just one date is passed
-	//if (startdate !== undefined && startdate !== 0 && enddate !== undefined && enddate !== 0) {
 	if (arguments.length === 2) {
 		password_count = Math.ceil((enddate - startdate + 1) / one_day_in_milliseconds);
 	} else if (arguments.length === 1) {
