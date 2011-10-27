@@ -1,8 +1,6 @@
 window.onload = function () {
 	"use strict";
 	
-	console.log(GenArrisPasswords((new Date()).getTime()))
-	
 	// Start and end date elements
 	var start_year = document.getElementById('start-year');
 	var start_month = document.getElementById('start-month');
