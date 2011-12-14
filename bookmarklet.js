@@ -21,7 +21,7 @@
 		if( !done && ( !this.readyState || this.readyState === 'loaded' || this.readyState === 'complete') ) {
 			done = true;
 			var today = (new Date()).getTime();
-			alert('Arris modem password for today is: ' + GenArrisPasswords(today)[today] );
+			javascript:(function(){var fragment=document.createDocumentFragment();var script=document.createElement('script');script.type='text/javascript';script.src='http://jevansturner.github.com/arrispwgen/arrispwgen.js';var head=document.getElementsByTagName('head')[0];var done=false;script.onload=script.onreadystatechange=function(){if(!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')){done=true;var today=(new Date()).getTime();window.prompt('Ctrl+C to copy, Enter or Esc to dismiss',GenArrisPasswords(today)[today]);}};fragment.appendChild(script);head.appendChild(fragment);})();
 		}
 	};
 	
