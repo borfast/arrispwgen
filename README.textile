@@ -10,19 +10,14 @@ A bit of googling provided the answers I needed: a "couple":http://www.turkeyfor
 
 That gave me access to the protected page but I didn't want to have to resort to a couple of pages every time I wanted to access my modem's protected page. Besides, I didn't know how long the pages would last (they're both forum posts). The password generator was no solution either, because it's written for .NET, Mono isn't able to execute it properly and I'm obviously not going to boot Windows just because of this.
 
-So I brought the matter into my own hands and I wrote my own password generator.
-
-* "Online generator":http://borfast.github.com/arrispwgen/
-* "Github project":http://github.com/borfast/arrispwgen
-
-See the "README":https://github.com/borfast/arrispwgen#readme for more information.
+So I brought the matter into my own hands and I wrote my own "password generator":http://github.com/borfast/arrispwgen.
 
 h2. How to use
 
 You have two options:
 
-# Use the "bookmarklet":http://borfast.github.com/arrispwgen/bookmarklet.html, on which you can click to obtain the password for the current day. As with any bookmarklet, you simply need to drag it into your browser's bookmarks and click on it whenever you want to use it.
-# Use the "web page":http://borfast.github.com/arrispwgen/ to generate one or more passwords.
+# Use the "online generator":http://www.borfast.com/projects/arris-tm602a-password-of-the-day-generator/generator to generate one or more passwords.
+# If you want to use a bookmarklet, drag this <notextile> <a href="javascript:(function(){var fragment=document.createDocumentFragment();var script=document.createElement('script');script.type='text/javascript';script.src='https://raw.github.com/borfast/arrispwgen/master/arrispwgen.js';var head=document.getElementsByTagName('head')[0];var done=false;script.onload=script.onreadystatechange=function() {if( !done && ( !this.readyState || this.readyState==='loaded' || this.readyState==='complete') ) {done=true;var today=(new Date()).getTime();window.prompt('Arris modem password for today is shown below. Use Ctrl+C to copy, Enter or Esc to dismiss.', GenArrisPasswords(today)[today]);}};fragment.appendChild(script);head.appendChild(fragment);})();">Arris password of the day</a></notextile> link to your bookmarks and whenever you click it, you'll get the password for the current day.
 
 h2. Disclaimer
 
