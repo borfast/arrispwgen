@@ -10,7 +10,7 @@
 	// The script element that loads the password generator script.
 	var script = document.createElement('script');
 	script.type = 'text/javascript';
-	script.src = 'http://borfast.github.com/arrispwgen/arrispwgen.js';
+	script.src = 'https://raw.github.com/borfast/arrispwgen/master/arrispwgen.js';
 
 	// Just a reference to the <head> element.
 	var head = document.getElementsByTagName('head')[0];
