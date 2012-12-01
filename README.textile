@@ -23,7 +23,7 @@ h2. Ports to other languages
 
 Marcel Valdez Orozco ported the generator to C# (usable in LINQPad) and posted the code in a gist: https://gist.github.com/3837628
 Thanks Marcel!
-If you have your own ports, let me know and I'll add it here.
+If you have your own port to another language, let me know and I'll add it here.
 
 h2. Disclaimer
 
