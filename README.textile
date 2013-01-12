@@ -21,8 +21,8 @@ You have two options:
 
 h2. Ports to other languages
 
-Marcel Valdez Orozco ported the generator to C# (usable in LINQPad) and posted the code in a gist: https://gist.github.com/3837628
-Daniel J. H. created a C++11 version for the command line: https://github.com/daniel-j-h/TM602X
+Marcel Valdez Orozco ported the generator to C# (usable in LINQPad) and posted the code in a <a href="https://gist.github.com/3837628">gist</a>.
+Daniel J. H. created a <a href="https://github.com/daniel-j-h/TM602X">C++11 version</a> for the command line.
 
 Thanks guys!
 
