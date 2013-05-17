@@ -22,7 +22,14 @@
 	<header>
 		<h1>Arris TM602A password of the day generator</h1>
 	</header>
-	
+
+	<section>
+		<p>This modem (and a few others, but I only tested the TM602A) have an algorithm to accept a different password every day.</p>
+		<p>This password generator gives you the ability to generate a list of passwords for a bunch of days at once.</p>
+		<p>The start and end dates are basically the first and last day for which you would like a password generated. Just enter the day, month and year for each of them and press the "Go" button.</p>
+		<p>If you want a password for a single day, you enter the same date for both. This is actually the default, i.e., what you get automatically when you open this page: today's date on both start and end dates.</p>
+	</section>
+
 	<form>
 		<fieldset id="start-date">
 			<legend>Start date</legend>
@@ -30,17 +37,17 @@
 			<label for="start-month">Month</label><input type="text" id="start-month" size="3" />
 			<label for="start-day">Day</label><input type="text" id="start-day" size="3" />
 		</fieldset>
-		
+
 		<fieldset id="end-date">
 			<legend>End date</legend>
 			<label for="end-year">Year</label><input type="text" id="end-year" size="4" />
 			<label for="end-month">Month</label><input type="text" id="end-month" size="3" />
 			<label for="end-day">Day</label><input type="text" id="end-day" size="3" />
 		</fieldset>
-		
+
 		<input type="button" id="go" value="Go!" />
 	</form>
-	
+
 	<table id="password-list">
 		<tr>
 			<th>Date</th><th>Password</th>
