@@ -1,6 +1,6 @@
 h2. Description
 
-This is a "password of the day" generator for Arris TM602A cable modems, and probably other Arris models.
+This is a "password of the day" generator for Arris TM602A cable modems, and probably other Arris models like TG862A.
 
 I created this because a cable modem died on me and my ISP, Cabovisão (if you're in Portugal, I highly recommend them), brought me a new one: an Arris TM602A.
 
