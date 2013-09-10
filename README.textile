@@ -1,23 +1,37 @@
+Do you need an Arris modem password? Are you stuck with your Arris modem, in a message that says "in order to access advanced features you must enter the password of the day"? Well then, you came to the right place!
+
 h2. Description
 
-This is a "password of the day" generator for Arris TM602A cable modems, and probably other Arris models like TG862A.
+This is a am Arris password of the day generator for various Arris cable modems.
 
 I created this because a cable modem died on me and my ISP, Cabovisão (if you're in Portugal, I highly recommend them), brought me a new one: an Arris TM602A.
 
 As usual when I receive a new technological gadget, I had to explore it. The web interface, accessible via "http://192.168.100.1":http://192.168.100.1, is quite simpler than my previous modem, the "Scientific Atlanta Webstar 2203c":http://www.borfast.com/blog/scientific-atlanta-webstar-2203c-how-access-locked-pages, but it also has a password protected page.
 
-A bit of googling provided the answers I needed: a "couple":http://www.turkeyforum.com/satforum/showthread.php?t=557567 of "pages":http://forum.donanimhaber.com/m_36352536/tm.htm with a list of passwords of the day (this device has a different password every day) and a "page with a password generator":http://www.taringa.net/posts/downloads/3918409/ARRISpwod-Modem-Arris-Tm501a.html (for the TM501A model but seems to work fine for the TM602A).
+A bit of googling provided the answers I needed: a "couple":http://www.turkeyforum.com/satforum/showthread.php?t=557567 of "pages":http://forum.donanimhaber.com/m_36352536/tm.htm with a list of passwords of the day (this device has a different password every day) and a "page with a password generator":http://www.taringa.net/posts/downloads/3918409/ARRISpwod-Modem-Arris-Tm501a.html for the TM501A model but seems to work fine for the TM602A.
 
 That gave me access to the protected page but I didn't want to have to resort to a couple of pages every time I wanted to access my modem's protected page. Besides, I didn't know how long the pages would last (they're both forum posts). The password generator was no solution either, because it's written for .NET, Mono isn't able to execute it properly and I'm obviously not going to boot Windows just because of this.
 
-So I brought the matter into my own hands and I wrote my own "password generator":http://github.com/borfast/arrispwgen.
+So I brought the matter into my own hands and I wrote my own "arris password generator":https://github.com/borfast/arrispwgen.
+
+h2. Tested modems
+
+This is a list of modems for which this password generator generates valid passwords.
+If you know other models that work, please let me know in the comments below.
+
+# Arris DG860
+# Arris TM501A
+# Arris TM602A
+# Arris TM602B
+# Arris TG862A
+
 
 h2. How to use
 
 You have two options:
 
 # Use the "online generator":http://www.borfast.com/projects/arris-tm602a-password-of-the-day-generator/generator to generate one or more passwords.
-# If you want to use a bookmarklet, drag this <notextile><a href="javascript:(function(){var fragment=document.createDocumentFragment();var script=document.createElement('script');script.type='text/javascript';script.src='https://raw.github.com/borfast/arrispwgen/master/arrispwgen.js';var head=document.getElementsByTagName('head')[0];var done=false;script.onload=script.onreadystatechange=function() {if( !done && ( !this.readyState || this.readyState==='loaded' || this.readyState==='complete') ) {done=true;var today=(new Date()).getTime();window.prompt('Arris modem password for today is shown below. Use Ctrl+C to copy, Enter or Esc to dismiss.', GenArrisPasswords(today)[today]);}};fragment.appendChild(script);head.appendChild(fragment);})();">Arris password of the day</a></notextile> link to your bookmarks and whenever you click it, you'll get the password for the current day.
+# If you want to use a bookmarklet, drag this <notextile> <a href="javascript:(function(){var fragment=document.createDocumentFragment();var script=document.createElement('script');script.type='text/javascript';script.src='http://borfast.github.com/arrispwgen/arrispwgen.js';var head=document.getElementsByTagName('head')[0];var done=false;script.onload=script.onreadystatechange=function() {if( !done && ( !this.readyState || this.readyState==='loaded' || this.readyState==='complete') ) {done=true;var today=(new Date()).getTime();window.prompt('Arris modem password for today is shown below. Use Ctrl+C to copy, Enter or Esc to dismiss.', GenArrisPasswords(today)[today]);}};fragment.appendChild(script);head.appendChild(fragment);})();">Arris password of the day</a></notextile> link to your bookmarks and whenever you click it, you'll get the password for the current day.
 
 h2. Ports to other languages
 
