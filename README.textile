@@ -24,6 +24,7 @@ If you know other models that work, please let me know in the comments below.
 # Arris TM602A
 # Arris TM602B
 # Arris TG862A
+# Arris WBM760A
 
 
 h2. How to use
