@@ -19,6 +19,7 @@ h2. Tested modems
 This is a list of modems for which this password generator generates valid passwords.
 If you know other models that work, please let me know in the comments below.
 
+# Arris CM820A
 # Arris DG860
 # Arris TM501A
 # Arris TM602A
