@@ -12,7 +12,7 @@ A bit of googling provided the answers I needed: a "couple":http://www.turkeyfor
 
 That gave me access to the protected page but I didn't want to have to resort to a couple of pages every time I wanted to access my modem's protected page. Besides, I didn't know how long the pages would last (they're both forum posts). The password generator was no solution either, because it's written for .NET, Mono isn't able to execute it properly and I'm obviously not going to boot Windows just because of this.
 
-So I brought the matter into my own hands and I wrote my own "arris password generator":https://github.com/borfast/arrispwgen.
+So I brought the matter into my own hands and I wrote my own "arris password generator":http://www.borfast.com/projects/arris-password-of-the-day-generator.
 
 h2. Tested modems
 
