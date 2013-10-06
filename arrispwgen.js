@@ -9,7 +9,7 @@
 
 // TODO: Add some testing, just for fun.
 
-function GenArrisPasswords(startdate, enddate) {
+function ArrisPwGen(startdate, enddate) {
     "use strict";
 
     var password_count = 0;

@@ -21,7 +21,7 @@
         if( !done && ( !this.readyState || this.readyState === 'loaded' || this.readyState === 'complete') ) {
             done = true;
             var today = (new Date()).getTime();
-            window.prompt('Arris modem password for today is shown below. Use Ctrl+C to copy, Enter or Esc to dismiss.', GenArrisPasswords(today)[today]);
+            window.prompt('Arris modem password for today is shown below. Use Ctrl+C to copy, Enter or Esc to dismiss.', ArrisPwGen(today)[today]);
         }
     };
 

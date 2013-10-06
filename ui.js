@@ -30,7 +30,7 @@ window.onload = function () {
         // to the password generator
         var start_date = new Date(start_year.value, start_month.value - 1, start_day.value, 0, 0, 0, 0),
             end_date = new Date(end_year.value, end_month.value - 1, end_day.value, 0, 0, 0, 0),
-            passwords = GenArrisPasswords(start_date.getTime(), end_date.getTime());
+            passwords = ArrisPwGen(start_date.getTime(), end_date.getTime());
 
         // UI elements.
         var table_guts = document.createDocumentFragment(),
