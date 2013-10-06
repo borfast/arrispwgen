@@ -2,7 +2,7 @@ Do you need an Arris modem password? Are you stuck with your Arris modem, in a m
 
 h2. Description
 
-This is a am Arris password of the day generator for various Arris cable modems.
+This is a an Arris password of the day generator for various Arris cable modems.
 
 I created this because a cable modem died on me and my ISP, Cabovisão (if you're in Portugal, I highly recommend them), brought me a new one: an Arris TM602A.
 
@@ -38,8 +38,9 @@ You have two options:
 
 h2. Ports to other languages
 
-Marcel Valdez Orozco ported the generator to C# (usable in LINQPad) and posted the code in a <a href="https://gist.github.com/3837628">gist</a>.
-Daniel J. H. created a <a href="https://github.com/daniel-j-h/TM602X">C++11 version</a> for the command line.
+* Marcel Valdez Orozco ported the generator to C# (usable in LINQPad) and posted the code in a <a href="https://gist.github.com/3837628">gist</a>.
+* Daniel J. H. created a <a href="https://github.com/daniel-j-h/TM602X">C++11 version</a> for the command line.
+* Daniel Sales created the Perl version available in this project's repository (arrispwgen.pl).
 
 Thanks guys!
 
