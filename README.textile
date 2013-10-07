@@ -25,6 +25,7 @@ If you know other models that work, please let me know in the comments below.
 * Arris TM602A
 * Arris TM602B
 * Arris TM802G
+* Arris TG862
 * Arris TG862A
 * Arris WBM760A
 
@@ -40,7 +41,7 @@ h2. Ports to other languages
 
 * Marcel Valdez Orozco ported the generator to C# (usable in LINQPad) and posted the code in a <a href="https://gist.github.com/3837628">gist</a>.
 * Daniel J. H. created a <a href="https://github.com/daniel-j-h/TM602X">C++11 version</a> for the command line.
-* Daniel Sales created the Perl version available in this project's repository (arrispwgen.pl).
+* Daniel Sales created the Perl and Java versions available in this project's repository (arrispwgen.pl and ArrisPwdGen.java).
 
 Thanks guys!
 
