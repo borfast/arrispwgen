@@ -50,3 +50,8 @@ If you have your own port to another language, let me know and I'll add it here.
 h2. Disclaimer
 
 Please note that I did this mostly for fun and not for profit of any kind, nor does this open up anything private or dangerous to the world. Unlike with the "Scientific Atlanta Webstar 2203c":http://www.borfast.com/blog/scientific-atlanta-webstar-2203c-how-access-locked-pages, which allowed a little bit of fiddling with the modem's configuration, the Arris TM602A does not allow any modifications to the configuration at all - all it allows is to enable or disable a couple of logs, and run some diagnostic tests. In other words, this tool does not provide access to any secret information or allow you to do any malicious actions by itself. You do need to be aware if you are breaking any laws or contracts if you use it, though.
+
+
+h2. Donations
+
+If this was useful to you in any way, please consider donating some Bitcoins (1DXAFLsg4xnwdvkqQTJYCpsZvM5TRbdLUM) or Litecoins (LSwN9pDyVzGRfs2ibeauCLWwAwvhCDPc3a). Thanks!
