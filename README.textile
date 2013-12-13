@@ -1,6 +1,6 @@
 Do you need an Arris modem password? Are you stuck with your Arris modem, in a message that says "in order to access advanced features you must enter the password of the day"? Well then, you came to the right place!
 
-h3. Donations
+h4. Donations
 
 Was this useful to you? Please consider donating some Bitcoins (1DXAFLsg4xnwdvkqQTJYCpsZvM5TRbdLUM) or Litecoins (LSwN9pDyVzGRfs2ibeauCLWwAwvhCDPc3a). Thanks!
 
