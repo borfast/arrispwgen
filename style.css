@@ -30,13 +30,19 @@ body, button, input, select, textarea {
 
 #start-date {
 	float: left;
-	width: 45%;
+	width: 30%;
 	font-size: 18px;
 }
 
 #end-date {
-	float: right;
-	width: 45%;
+	float: left;
+	width: 30%;
+	font-size: 18px;
+}
+
+#seed {
+	float: left;
+	width: 30%;
 	font-size: 18px;
 }
 

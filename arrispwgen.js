@@ -9,14 +9,14 @@
 
 // TODO: Add some testing, just for fun.
 
-function ArrisPwGen(startdate, enddate) {
+function ArrisPwGen(startdate, enddate, new_seed) {
     "use strict";
 
     var password_count = 0;
     var one_day_in_milliseconds = 24 * 60 * 60 * 1000; // 1 day in milliseconds
 
     // Check how many passwords we're going to generate.
-    if (arguments.length === 2) {
+    if (arguments.length >= 2) {
         password_count = Math.ceil((enddate - startdate + 1) / one_day_in_milliseconds);
     } else if (arguments.length === 1) {
         password_count = 1;
@@ -28,9 +28,11 @@ function ArrisPwGen(startdate, enddate) {
     }
 
 
-    var seed = 'MPSJKMDHAI',
+    var seed = new_seed || 'MPSJKMDHAI',
         seedeight = seed.substr(0, 8),
         seedten = seed;
+
+    console.log('seed: ', seed);
 
     var table1 = [
         [15, 15, 24, 20, 24],
