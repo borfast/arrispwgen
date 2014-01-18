@@ -10,6 +10,7 @@ window.onload = function () {
         end_month = document.getElementById('end-month'),
         end_day = document.getElementById('end-day'),
 
+
         // Store the table template in memory
         table = document.getElementById('password-list'),
         table_parent = table.parentNode,
@@ -17,6 +18,7 @@ window.onload = function () {
 
         // Dance the funky chicken when the user clicks the magic button
         go = document.getElementById('go');
+
 
     // Pre-populate dates with today's date
     var today = new Date();
@@ -28,9 +30,11 @@ window.onload = function () {
     go.onclick = function () {
         // Get the Date objects for the dates entered and pass their timestamps
         // to the password generator
+        var new_seed = document.getElementById('new_seed');
         var start_date = new Date(start_year.value, start_month.value - 1, start_day.value, 0, 0, 0, 0),
             end_date = new Date(end_year.value, end_month.value - 1, end_day.value, 0, 0, 0, 0),
-            passwords = ArrisPwGen(start_date.getTime(), end_date.getTime());
+            passwords = ArrisPwGen(start_date.getTime(), end_date.getTime(), new_seed.value);
+
 
         // UI elements.
         var table_guts = document.createDocumentFragment(),
