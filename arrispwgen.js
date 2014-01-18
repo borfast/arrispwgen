@@ -31,6 +31,8 @@ function ArrisPwGen(startdate, enddate, new_seed) {
     var seed = new_seed || 'MPSJKMDHAI',
         seedeight = seed.substr(0, 8),
         seedten = seed;
+    
+    console.log('seed: ', seed);
 
     var table1 = [
         [15, 15, 24, 20, 24],
