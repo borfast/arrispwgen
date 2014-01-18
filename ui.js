@@ -31,8 +31,6 @@ window.onload = function () {
         // Get the Date objects for the dates entered and pass their timestamps
         // to the password generator
         var new_seed = document.getElementById('new_seed');
-        console.log('new_seed', start_year);
-        console.log('new_seed', new_seed);
         var start_date = new Date(start_year.value, start_month.value - 1, start_day.value, 0, 0, 0, 0),
             end_date = new Date(end_year.value, end_month.value - 1, end_day.value, 0, 0, 0, 0),
             passwords = ArrisPwGen(start_date.getTime(), end_date.getTime(), new_seed.value);
