@@ -28,7 +28,9 @@ If you know other models that work, please let me know in the comments below.
 * Arris TM501A
 * Arris TM602A
 * Arris TM602B
+* Arris TM722G
 * Arris TM802G
+* Arris TM822G
 * Arris TG862
 * Arris TG862A
 * Arris WBM760A
