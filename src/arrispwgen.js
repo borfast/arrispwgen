@@ -30,13 +30,3 @@ export function arrisPwGen(startdate, enddate, seed = DEFAULT_SEED) {
 
     return password_list;
 }
-
-// Month is zero-based
-let yesterday = new Date(2016, 11, 1);
-let today = new Date(2016, 11, 2);
-let tomorrow = new Date(2016, 11, 3);
-let next_week = new Date(2016, 11, 10);
-console.log(generate(yesterday, yesterday));
-console.log(generate(today, today));
-console.log(generate(tomorrow, tomorrow));
-console.log(generate(next_week, next_week));
