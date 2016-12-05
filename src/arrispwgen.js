@@ -1,3 +1,4 @@
+import moment from 'moment';
 import {DEFAULT_SEED, ALPHANUM} from './constants';
 import {indexers} from './data';
 
@@ -15,18 +16,24 @@ export function generate(date, seed = DEFAULT_SEED) {
     return password_of_the_day.join('');
 }
 
-export function arrisPwGen(startdate, enddate, seed = DEFAULT_SEED) {
-    let one_day_in_milliseconds = 24 * 60 * 60 * 1000;
-    let days = Math.ceil((enddate.getTime() - startdate.getTime() + 1) / one_day_in_milliseconds);
+export function generate_multi(startdate, enddate, seed = DEFAULT_SEED) {
+    if (startdate > enddate) {
+        throw 'The start date must precede the end date.';
+    }
+
+    let days = 1 + Math.ceil(moment(enddate).diff(startdate, 'days', true));
 
     // Now let's generate one password for each day
     let password_list = {};
+    let date = moment(startdate);
     for (let i = 0; i < days; i++) {
-        // For each iteration advance the date one day
-        let date = startdate + i;
-
-        password_list[date.getTime()] = generate(date, seed);
+        password_list[date.valueOf()] = generate(date.toDate(), seed);
+        date.add(1, 'day');
     }
 
     return password_list;
 }
+
+var d1 = new Date(2016, 10, 19);
+var d2 = new Date(2016, 10, 19);
+console.log(generate_multi(d1, d2));

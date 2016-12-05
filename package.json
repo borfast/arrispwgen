@@ -6,19 +6,22 @@
   "dependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
-    "babel-preset-node6": "^11.0.0"
+    "babel-preset-node6": "^11.0.0",
+    "moment": "^2.17.1"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "babel-tape-runner": "^2.0.1",
     "eslint": "^3.11.1",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
-    "mocha": "^3.2.0"
+    "faucet": "^0.0.1",
+    "istanbul": "^0.4.5",
+    "tape": "^4.6.3"
   },
   "scripts": {
     "build": "babel -d lib src/",
-    "test": "npm run build && mocha",
+    "test": "yarn run build && babel-tape-runner \"test/*.js\" | faucet",
     "prepublish": "npm run build"
   },
   "repository": {
