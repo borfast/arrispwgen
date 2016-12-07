@@ -33,7 +33,7 @@
     "arrispwd",
     "password-of-the-day"
   ],
-  "author": "Raúl Santos",
+  "author": "Raúl Santos (https://www.borfast.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/borfast/arrispwgen/issues"
