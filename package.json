@@ -34,7 +34,7 @@
     "password-of-the-day"
   ],
   "author": "Raúl Santos",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/borfast/arrispwgen/issues"
   },
