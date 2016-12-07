@@ -22,7 +22,7 @@
   "scripts": {
     "build": "babel -d lib src/",
     "test": "yarn run build && babel-tape-runner \"test/*.js\" | faucet",
-    "prepublish": "npm run build"
+    "prepublish": "yarn run build"
   },
   "repository": {
     "type": "git",
