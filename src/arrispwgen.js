@@ -33,7 +33,3 @@ export function generate_multi(startdate, enddate, seed = DEFAULT_SEED) {
 
     return password_list;
 }
-
-var d1 = new Date(2016, 10, 19);
-var d2 = new Date(2016, 10, 19);
-console.log(generate_multi(d1, d2));
