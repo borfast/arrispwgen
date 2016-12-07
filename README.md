@@ -1,6 +1,8 @@
 Arris Password of the Day Generator
 ===================================
 
+[![Build Status](https://travis-ci.org/borfast/arrispwgen.svg?branch=master)](https://travis-ci.org/borfast/arrispwgen)
+
 Do you need an Arris modem password? Are you stuck with your Arris modem, in a message that says "in order to access advanced features you must enter the password of the day"? Well then, you came to the right place!
 
 ## Description
