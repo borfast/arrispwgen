@@ -50,7 +50,7 @@ You have two options:
 
 * Marcel Valdez Orozco ported the generator to C# (usable in LINQPad) and posted the code in a [gist](https://gist.github.com/3837628).
 * Daniel J. H. created a [C++11 version](https://github.com/daniel-j-h/TM602X) for the command line.
-* Daniel Sales created the Perl and Java versions available in this project's repository (arrispwgen.pl and ArrisPwdGen.java).
+* Daniel Sales created the Perl and Java versions available in this project's repository (arrispwgen.pl and ArrisPwdGen.java inside the 'others' directory).
 * Harry Gonzalez created an [Android version](https://github.com/hcgonzalezpr/arrispod) and published it on [Google Play](https://play.google.com/store/apps/details?id=me.harrygonzalez.arrispod).
 
 Thanks guys! :)
