@@ -13,11 +13,11 @@ function test_single_passwords(assert, data, seed) {
     assert.end();
 }
 
-tape('Should generate the correct password for a given days with the default seed', function(assert) {
+tape('Should generate the correct password for the given days with the default seed', function(assert) {
     test_single_passwords(assert, using_default_seed);
 });
 
-tape('Should generate the correct password for a given days with a custom seed', function (assert) {
+tape('Should generate the correct password for the given days with a custom seed', function (assert) {
     test_single_passwords(assert, using_custom_seed, custom_seed);
 });
 
