@@ -2,12 +2,19 @@ import tape from 'tape';
 import { using_default_seed, using_custom_seed, custom_seed } from './data';
 import * as a from '../lib/arrispwgen';
 
+function simple_date(date) {
+    return date.toLocaleDateString('en-GB', {day: '2-digit', month: '2-digit', year: 'numeric'});
+}
+
 // DRY function for testing single password
 function test_single_passwords(assert, data, seed) {
     for (let p in data) {
         let date = (new Date(parseInt(p)));
         let potd = a.generate(date, seed);
-        assert.equal(potd, data[p], 'Generated password should be correct.');
+        assert.test('Password for: ' + simple_date(date) + ' (timestamp: ' + p + ')', function (test) {
+            test.equal(potd, data[p], 'Generated password should be correct.');
+            test.end();
+        });
     }
 
     assert.end();
@@ -45,14 +52,17 @@ tape('Should generate a single password if the date interval is just one day', f
 function test_multiple_passwords(assert, data, start_index, end_index, seed) {
     let keys = Object.keys(data);
 
-    // First set of passwords
     let start = new Date(parseInt(keys[start_index]));
     let end = new Date(parseInt(keys[end_index]));
     let potd = a.generate_multi(start, end, seed);
     let count = end_index - start_index + 1;
     assert.equal(Object.keys(potd).length, count, 'Should generate ' + count + ' passwords');
     for (let p in potd) {
-        assert.equal(potd[p], data[p], 'Generated password should be correct.');
+        let date = simple_date((new Date(parseInt(p))));
+        assert.test('Password for: ' + date + ' (timestamp: ' + p + ')', function (test) {
+            test.equal(potd[p], data[p], 'Generated password should be correct.');
+            test.end()
+        });
     }
 }
 
