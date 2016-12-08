@@ -61,7 +61,7 @@ function test_multiple_passwords(assert, data, start_index, end_index, seed) {
         let date = simple_date((new Date(parseInt(p))));
         assert.test('Password for: ' + date + ' (timestamp: ' + p + ')', function (test) {
             test.equal(potd[p], data[p], 'Generated password should be correct.');
-            test.end()
+            test.end();
         });
     }
 }
