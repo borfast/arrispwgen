@@ -38,18 +38,20 @@ if (dates.length > 2) {
 
 let input_date_format = 'YYYY-MM-DD';
 let long_date_format = 'dddd, MMMM Do YYYY';
+let data = [];
 
 if (dates.length == 1) {
     let date = moment(dates[0], input_date_format);
     let long_date = date.format(long_date_format);
     let potd = arrispwgen.generate(date.toDate(), seed);
-    console.log(`\nPassword for ${long_date}: ${potd}\n`);
+    data.push({
+        date: long_date,
+        password: potd
+    });
 } else {
     let start_date = moment(dates[0], input_date_format);
     let end_date = moment(dates[1], input_date_format);
     let potd = arrispwgen.generate_multi(start_date.toDate(), end_date.toDate(), seed);
-
-    let data = [];
 
     for (let p in potd) {
         data.push({
@@ -57,6 +59,8 @@ if (dates.length == 1) {
             password: potd[p]
         });
     }
-
-    console.log(columnify(data));
 }
+
+console.log(columnify(data, {
+    columnSplitter: ' | '
+}));
