@@ -1,6 +1,6 @@
 {
   "name": "arrispwgen",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Arris Password of the Day Generator",
   "main": "arrispwgen.js",
   "engines": {
