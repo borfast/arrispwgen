@@ -88,7 +88,7 @@ Tuesday, December 13th 2016  | G6TBPWYH6J
 
 ## Tested modems
 
-This is a list of modems for which this password generator generates valid passwords.
+This is a list of known modems for which this password generator generates valid passwords.
 If you know other models that work, please let me know in the comments below.
 
 * Arris CM820A
