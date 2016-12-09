@@ -25,7 +25,7 @@ function print_usage() {
     console.log('The dates should be specified in ISO 8601 format, i.e. "YYYY-MM-DD". Example for Christmas day 2016: "2016-12-25".')
 }
 
-if (argv.hasOwnProperty('help') || dates.length == 0) {
+if (argv.hasOwnProperty('help')) {
     print_usage();
     process.exit();
 }
@@ -39,6 +39,11 @@ if (dates.length > 2) {
 let input_date_format = 'YYYY-MM-DD';
 let long_date_format = 'dddd, MMMM Do YYYY';
 let data = [];
+
+// If no date is given, default to outputting the password for the current date.
+if (dates.length == 0) {
+    dates.push(moment().format(input_date_format));
+}
 
 if (dates.length == 1) {
     let date = moment(dates[0], input_date_format);
