@@ -1,18 +1,25 @@
 Arris Password of the Day Generator
 ===================================
+[![NPM](https://nodei.co/npm/arrispwgen.png)](https://nodei.co/npm/arrispwgen/)
 
+[![NPM Version](https://img.shields.io/npm/v/arrispwgen.svg?style=flat)](https://npmjs.org/package/arrispwgen)
+[![License](http://img.shields.io/npm/l/arrispwgen.svg?style=flat)](LICENSE)
 [![Build Status](https://travis-ci.org/borfast/arrispwgen.svg?branch=master)](https://travis-ci.org/borfast/arrispwgen)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/borfast/arrispwgen/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/borfast/arrispwgen/?branch=master)
+[![Dependency Status](https://david-dm.org/borfast/arrispwgen.svg)](https://david-dm.org/borfast/arrispwgen)
+[![devDependency Status](https://david-dm.org/borfast/arrispwgen/dev-status.svg)](https://david-dm.org/borfast/arrispwgen#info=devDependencies)
 
-Do you need an Arris modem password? Are you stuck with your Arris modem, in a message that says "in order to access advanced features you must enter the password of the day"? Well then, you came to the right place!
+Do you need an Arris modem password? Are you stuck with your Arris modem, in a message that says "in order to access advanced features you must enter the password of the day"? Then you came to the right place!
 
 ## Description
 
 This is a an Arris password of the day generator for various Arris cable modems.
 
-I created this because a cable modem died on me and my ISP, Cabovisão (if you're in Portugal, I highly recommend them), brought me a new one: an Arris TM602A.
+I created this because a cable modem died on me and my ISP, Cabovisão (now called Nowo - if you're in Portugal, I highly recommend them), brought me a new one: an Arris TM602A.
 
-As usual when I receive a new technological gadget, I had to explore it. The web interface, accessible via [http://192.168.100.1](http://192.168.100.1), is quite simpler than my previous modem, the [Scientific Atlanta Webstar 2203c](http://www.borfast.com/blog/scientific-atlanta-webstar-2203c-how-access-locked-pages), but it also has a password protected page.
+As usual when I receive a new technological gadget, I had to explore it. The web interface, accessible via [http://192.168.100.1](http://192.168.100.1), was quite simpler than my previous modem, the [Scientific Atlanta Webstar 2203c](http://www.borfast.com/blog/scientific-atlanta-webstar-2203c-how-access-locked-pages) but it also had a password protected page.
+
+I couldn't just accept that I was locked out of my own piece of equipment, so I did some research.
 
 A bit of googling provided the answers I needed: a [couple](http://www.turkeyforum.com/satforum/showthread.php?t=557567) of [pages](http://forum.donanimhaber.com/m_36352536/tm.htm) with a list of passwords of the day (this device has a different password every day) and a [page with a password generator](http://www.taringa.net/posts/downloads/3918409/ARRISpwod-Modem-Arris-Tm501a.html) for the TM501A model but seems to work fine for the TM602A.
 
