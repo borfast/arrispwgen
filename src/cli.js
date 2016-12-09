@@ -66,6 +66,7 @@ if (dates.length == 1) {
     }
 }
 
+console.log();
 console.log(columnify(data, {
     columnSplitter: ' | '
 }));

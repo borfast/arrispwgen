@@ -1,5 +1,5 @@
-Arris Password of the Day Generator
-===================================
+# Arris Password of the Day Generator
+
 [![NPM](https://nodei.co/npm/arrispwgen.png)](https://nodei.co/npm/arrispwgen/)
 
 [![NPM Version](https://img.shields.io/npm/v/arrispwgen.svg?style=flat)](https://npmjs.org/package/arrispwgen)
@@ -17,15 +17,74 @@ This is a an Arris password of the day generator for various Arris cable modems.
 
 I created this because a cable modem died on me and my ISP, Cabovisão (now called Nowo - if you're in Portugal, I highly recommend them), brought me a new one: an Arris TM602A.
 
-As usual when I receive a new technological gadget, I had to explore it. The web interface, accessible via [http://192.168.100.1](http://192.168.100.1), was quite simpler than my previous modem, the [Scientific Atlanta Webstar 2203c](http://www.borfast.com/blog/scientific-atlanta-webstar-2203c-how-access-locked-pages) but it also had a password protected page.
+As usual when I get a new technological gadget, I had to explore it. The web interface, accessible via [http://192.168.100.1](http://192.168.100.1), was quite simpler than my previous modem, the [Scientific Atlanta Webstar 2203c](https://www.borfast.com/blog/2007/11/06/scientific-atlanta-webstar-2203c---how-to-access-locked-pages/) but it also had a password protected page.
 
-I couldn't just accept that I was locked out of my own piece of equipment, so I did some research.
+That obviously piqued my interest and I had to try to get in.
 
-A bit of googling provided the answers I needed: a [couple](http://www.turkeyforum.com/satforum/showthread.php?t=557567) of [pages](http://forum.donanimhaber.com/m_36352536/tm.htm) with a list of passwords of the day (this device has a different password every day) and a [page with a password generator](http://www.taringa.net/posts/downloads/3918409/ARRISpwod-Modem-Arris-Tm501a.html) for the TM501A model but seems to work fine for the TM602A.
+A bit of googling provided the answers I needed: apparently this device had a different password every day and I found a [couple](http://www.turkeyforum.com/satforum/showthread.php?t=557567) of [pages](http://forum.donanimhaber.com/m_36352536/tm.htm) with a list of passwords of the day, as well as a ~~[page with a password generator](http://www.taringa.net/posts/downloads/3918409/ARRISpwod-Modem-Arris-Tm501a.html)~~ (no longer available) for the TM501A model which seemed to work fine for the TM602A.
 
-That gave me access to the protected page but I didn't want to have to resort to a couple of pages every time I wanted to access my modem's protected page. Besides, I didn't know how long the pages would last (they're both forum posts). The password generator was no solution either, because it's written for .NET, Mono isn't able to execute it properly and I'm obviously not going to boot Windows just because of this.
+That gave me access to the protected page but I didn't want to be dependent on those two pages every time I wanted to access my modem's protected page. Besides, I didn't know how long the pages would last (they're both forum posts). The password generator was no solution either, because it's written for .NET, Mono isn't able to execute it properly and I'm obviously not going to install Windows just because of this.
 
 So I brought the matter into my own hands and I wrote my own [arris password of the day generator](http://www.borfast.com/projects/arris-password-of-the-day-generator).
+
+## How to use
+
+#### Online
+
+You can use the [online generator](http://www.borfast.com/projects/arris-tm602a-password-of-the-day-generator/generator) to generate one or more passwords.
+
+#### Bookmarklet
+
+Create a bookmark that uses the following code as the URL and whenever you click it, you'll get the password for the current day:
+`javascript:(function(){var fragment=document.createDocumentFragment();var script=document.createElement('script');script.type='text/javascript';script.src='https://www.borfast.com/arrispwgen/arrispwgen.js';var head=document.getElementsByTagName('head')[0];var done=false;script.onload=script.onreadystatechange=function() {if( !done && ( !this.readyState || this.readyState==='loaded' || this.readyState==='complete') ) {done=true;var today=(new Date()).getTime();window.prompt('Arris modem password for today is shown below. Use Ctrl+C to copy, Enter or Esc to dismiss.', GenArrisPasswords(today)[today]);}};fragment.appendChild(script);head.appendChild(fragment);})();`
+
+#### Node.js
+
+Install the arrispwgen package with npm:
+
+`npm install -g arrispwgen`
+
+If you want the password for the current day, just call `arrispwgen` with no arguments:
+
+``` bash
+$ arrispwgen
+
+DATE                      | PASSWORD
+Friday, December 9th 2016 | 64Y3MV3L7G
+```
+
+To get the password for a given day, pass `arrispwgen` the date for which you want the password. For example:
+
+``` bash
+$ arrispwgen 2016-12-08
+
+DATE                        | PASSWORD
+Thursday, December 8th 2016 | 1R3IG4R4RH
+```
+
+In case you need to use a custom seed you can pass the `--seed` or `-s` argument:
+
+``` bash
+$ arrispwgen 2016-12-08 --seed ABCDEFGHIJ
+
+DATE                        | PASSWORD
+Thursday, December 8th 2016 | 9KEWMO5JKE
+```
+
+You can also get the passwords for a range of days by passing a start date and an end date:
+
+``` bash
+$ arrispwgen 2016-12-08 2016-12-13
+
+DATE                         | PASSWORD
+Thursday, December 8th 2016  | 1R3IG4R4RH
+Friday, December 9th 2016    | 64Y3MV3L7G
+Saturday, December 10th 2016 | KMAR88TPKY
+Sunday, December 11th 2016   | ZOU3M83Z9E
+Monday, December 12th 2016   | WIVIK4INFD
+Tuesday, December 13th 2016  | G6TBPWYH6J
+```
+
 
 ## Tested modems
 
@@ -46,13 +105,55 @@ If you know other models that work, please let me know in the comments below.
 * Arris WBM760A
 
 
-## How to use
+## Troubleshooting
 
-You have two options:
+If the generated passwords are not working for your modem there are a few things you can try.
 
-* Use the [online generator](http://www.borfast.com/projects/arris-tm602a-password-of-the-day-generator/generator) to generate one or more passwords.
-* Create a bookmark that uses this code as the URL and whenever you click it, you'll get the password for the current day:
-`javascript:(function(){var fragment=document.createDocumentFragment();var script=document.createElement('script');script.type='text/javascript';script.src='https://www.borfast.com/arrispwgen/arrispwgen.js';var head=document.getElementsByTagName('head')[0];var done=false;script.onload=script.onreadystatechange=function() {if( !done && ( !this.readyState || this.readyState==='loaded' || this.readyState==='complete') ) {done=true;var today=(new Date()).getTime();window.prompt('Arris modem password for today is shown below. Use Ctrl+C to copy, Enter or Esc to dismiss.', GenArrisPasswords(today)[today]);}};fragment.appendChild(script);head.appendChild(fragment);})();`
+#### 1. Check the date
+
+The first and simplest is to check the date on your modem. If it the day on the modem's date and the date for which you are generating a password don't match, the password will not work.
+
+#### 2. Try a default password
+
+The second simplest thing is only an option if your modem asks for a username and a password. You can try the [known default passwords for Arris modems](https://portforward.com/router-password/arris.htm). Some users on other sites report that they can get in using "technician" as the username and either the default password or a generated password.
+
+#### 3. Go into hacker mode :)
+
+The third option is the tricky one, and involves a lot of fiddling with a command line and some more advanced tools. If that scares you, read on, it's not all over.
+
+If none of the above options worked, or if your modem just asks for a password of the day without any username, chances are your ISP changed the password generator seed in your modem.
+
+Some time ago I found an exploit that works for getting the admin interface password from the modem and it might also work for getting the seed. It allows you to dump the contents of your modem's NVRAM, where hopefully you can find the seed.
+
+If you want to try it, you'll need to have Ruby installed as well as the Ruby `highline` package and then follow these steps:
+
+1. Download a memory dump from your router, accessible at `http://192.168.0.1/router.data`. Your modem's IP address may be different, adjust accordingly. If you get a "404 Not Found" error, you can try logging into your router as the regular admin user ([known passwords are available here](http://setuprouter.com/router/arris/passwords.htm)), going to the backups section and get the file from there. If that still doesn't work, then I'm afraid this guide won't be of any further help.
+
+2. Decompress the backup file. If using a *nix operating system like macOS or Linux you can do it with the following command: `tar vxf router.data`. If you use Windows you can probably use something like Winzip or Winrar.
+
+3. If the previous step doesn't result in any error, skip this one. If decompressing the file doesn't work, it might be because some more recent modems encrypt the backup file. Fortunately the credentials are known, since they are written in plain text in one of the router files, and thus we can decrypt the backup file. Decrypt `router.data` by using the following command: `openssl enc -d -aes-256-cbc -in router.data -out backup.tar -pass pass:Sercomm` and then decompress the resulting backup.tar file with the following command: `tar vxf backup.tar`
+
+4. Download the Ruby [exploit code](https://raw.githubusercontent.com/borfast/arrispwgen/master/sc_mix.rb) (the original is at [http://www.exploit-db.com/exploits/29131/](http://www.exploit-db.com/exploits/29131/))
+
+5. Run the Ruby script with the following command:
+`sudo ruby sc_mix.rb -u -s backup/sc_nvram.usr.sc -d sc_nvram_dump`
+
+6. The resulting "sc_nvram_dump" file contains a ton of modem configuration data but you only get it in hexadecimal format, which at first is a bit discouraging but if you load it into an hexadecimal editor, you'll see the configuration settings, which are separated by dots. For example, in a couple of models that have a fixed (i.e. not changing every day) administration password, the password value in the resulting dump is next to "sysAdminPassword[0]". At the time of this writing I haven't yet been able to test this on a dump of a modem that uses a password of the day mechanism, only fixed passwords, so I haven't yet been able to confirm whether the seed is also present in that dump.
+
+This should work on Linux and Mac but I'm not sure about Windows. You will need to drop the "sudo" in the beginning if you're on Windows but I'm not sure about the rest.
+
+If all this is too much for you, you can [contact me](http://www.borfast.com/contact), send me the file and I'll try to find the seed for you.
+
+For the sake of honesty, I should mention that this file will likely contain your modem's admin password, as I mentioned above. I don't intend to hack anyone's modem, nor would I be able to, not only because I don't know the IP address but also because if it is configured properly, I shouldn't even be able to access its administration interface from the internet, but I think I should be honest about it.
+
+### Extra information
+
+If you want to dig a little deeper into this subject, here are a few interesting things to check out:
+
+* [ARRIS Cable Modem has a Backdoor in the Backdoor](https://w00tsec.blogspot.pt/2015/11/arris-cable-modem-has-backdoor-in.html)
+* [Arris Cable Modem Backdoor - I'm a technician, trust me.](https://console-cowboys.blogspot.pt/2014/09/arris-cable-modem-backdoor-im.html)
+* [HOPE Number Nine (2012): The ARRIStocrats: Cable Modem Lulz](https://www.youtube.com/watch?v=jGUyOYgYoQQ)
+
 
 ## Ports to other languages
 
