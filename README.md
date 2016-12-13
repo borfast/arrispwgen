@@ -133,7 +133,7 @@ If you want to try it, you'll need to have Ruby installed as well as the Ruby `h
 
 3. If the previous step doesn't result in any error, skip this one. If decompressing the file doesn't work, it might be because some more recent modems encrypt the backup file. Fortunately the credentials are known, since they are written in plain text in one of the router files, and thus we can decrypt the backup file. Decrypt `router.data` by using the following command: `openssl enc -d -aes-256-cbc -in router.data -out backup.tar -pass pass:Sercomm` and then decompress the resulting backup.tar file with the following command: `tar vxf backup.tar`
 
-4. Download the Ruby [exploit code](https://raw.githubusercontent.com/borfast/arrispwgen/master/sc_mix.rb) (the original is at [http://www.exploit-db.com/exploits/29131/](http://www.exploit-db.com/exploits/29131/))
+4. Download the Ruby [exploit code](http://www.exploit-db.com/exploits/29131/).
 
 5. Run the Ruby script with the following command:
 `sudo ruby sc_mix.rb -u -s backup/sc_nvram.usr.sc -d sc_nvram_dump`
