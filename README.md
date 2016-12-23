@@ -95,6 +95,7 @@ If you know other models that work, please let me know in the comments below.
 * Arris DG860
 * Arris DG950A
 * Arris TM501A
+* Arris TM502B
 * Arris TM602A
 * Arris TM602B
 * Arris TM722G
