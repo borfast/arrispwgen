@@ -116,7 +116,13 @@ The first and simplest is to check the date on your modem. If it the day on the 
 
 #### 2. Try a default password
 
-The second simplest thing is only an option if your modem asks for a username and a password. You can try the [known default passwords for Arris modems](https://portforward.com/router-password/arris.htm). Some users on other sites report that they can get in using "technician" as the username and either the default password or a generated password.
+The second simplest thing is only an option if your modem asks for a username
+and a password. You can try the
+[known default passwords for Arris modems](https://portforward.com/router-password/arris.htm).
+Some users on other sites report that they can get in using "technician" as the
+username and either the default password or a generated password. You can also
+try using `T!m3W4rn3rC4bl3` as the password along with the username
+`technician` (this probably only works if your ISP is Time Warner, though).
 
 #### 3. Go into hacker mode :)
 
