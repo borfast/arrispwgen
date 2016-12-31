@@ -166,7 +166,7 @@ If you want to dig a little deeper into this subject, here are a few interesting
 
 * Marcel Valdez Orozco ported the generator to C# (usable in LINQPad) and posted the code in a [gist](https://gist.github.com/3837628).
 * Daniel J. H. created a [C++11 version](https://github.com/daniel-j-h/TM602X) for the command line.
-* Daniel Sales created the Perl and Java versions available in this project's repository (arrispwgen.pl and ArrisPwdGen.java inside the 'others' directory).
+* Daniel Sales created [Perl](https://www.borfast.com/arrispwgen/arrispwgen.pl) and [Java](https://www.borfast.com/arrispwgen/ArrisPwdGen.java) versions.
 * Harry Gonzalez created an [Android version](https://github.com/hcgonzalezpr/arrispod) and published it on [Google Play](https://play.google.com/store/apps/details?id=me.harrygonzalez.arrispod).
 
 Thanks guys! :)
