@@ -1,5 +1,5 @@
 import tape from 'tape';
-import { using_default_seed, using_custom_seed, custom_seed } from './data';
+import { using_default_seed, using_custom_seed, custom_seed } from './helper_data';
 import * as a from '../lib/arrispwgen';
 
 function simple_date(date) {
