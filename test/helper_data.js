@@ -4,34 +4,163 @@
 // Date object representing the 20th of *January*, 2016. Nice, right?... :(
 
 const test_dates = [
-    (new Date(2016, 10, 19)).getTime(),
-    (new Date(2016, 10, 20)).getTime(),
-    (new Date(2016, 10, 21)).getTime(),
-    (new Date(2016, 10, 22)).getTime(),
-    (new Date(2016, 11, 1)).getTime(),
-    (new Date(2016, 11, 2)).getTime(),
-    (new Date(2016, 11, 3)).getTime()
+    (new Date(2016, 10, 19)),
+    (new Date(2016, 10, 20)),
+    (new Date(2016, 10, 21)),
+    (new Date(2016, 10, 22)),
+    (new Date(2016, 11, 1)),
+    (new Date(2016, 11, 2)),
+    (new Date(2016, 11, 3))
 ];
 exports.test_dates = test_dates;
 
-let using_default_seed = {};
-using_default_seed[test_dates[0]] = '2BEIRWLZ35';
-using_default_seed[test_dates[1]] = 'O2A2MLL32D';
-using_default_seed[test_dates[2]] = 'K716USYKFR';
-using_default_seed[test_dates[3]] = 'NUD21IN1EV';
-using_default_seed[test_dates[4]] = '1F3I94R4FO';
-using_default_seed[test_dates[5]] = '64Y3MJRL0N';
-using_default_seed[test_dates[6]] = 'DTARW8TPKM';
-exports.using_default_seed = using_default_seed;
+let potd_using_default_seed = {};
+potd_using_default_seed[test_dates[0].getTime()] = '2BEIRWLZ35';
+potd_using_default_seed[test_dates[1].getTime()] = 'O2A2MLL32D';
+potd_using_default_seed[test_dates[2].getTime()] = 'K716USYKFR';
+potd_using_default_seed[test_dates[3].getTime()] = 'NUD21IN1EV';
+potd_using_default_seed[test_dates[4].getTime()] = '1F3I94R4FO';
+potd_using_default_seed[test_dates[5].getTime()] = '64Y3MJRL0N';
+potd_using_default_seed[test_dates[6].getTime()] = 'DTARW8TPKM';
+exports.potd_using_default_seed = potd_using_default_seed;
 
 exports.custom_seed = 'ABCDEFGHIJ';
 
-let using_custom_seed = {};
-using_custom_seed[test_dates[0]] = 'KF6WGPG74Q';
-using_custom_seed[test_dates[1]] = '2DL07E57EK';
-using_custom_seed[test_dates[2]] = 'E93CGHF957';
-using_custom_seed[test_dates[3]] = 'EG304636TM';
-using_custom_seed[test_dates[4]] = '9KEWMOYQ82';
-using_custom_seed[test_dates[5]] = 'IBV5K74ER9';
-using_custom_seed[test_dates[6]] = 'ELEXOJ6B2Q';
-exports.using_custom_seed = using_custom_seed;
+let potd_using_custom_seed = {};
+potd_using_custom_seed[test_dates[0].getTime()] = 'KF6WGPG74Q';
+potd_using_custom_seed[test_dates[1].getTime()] = '2DL07E57EK';
+potd_using_custom_seed[test_dates[2].getTime()] = 'E93CGHF957';
+potd_using_custom_seed[test_dates[3].getTime()] = 'EG304636TM';
+potd_using_custom_seed[test_dates[4].getTime()] = '9KEWMOYQ82';
+potd_using_custom_seed[test_dates[5].getTime()] = 'IBV5K74ER9';
+potd_using_custom_seed[test_dates[6].getTime()] = 'ELEXOJ6B2Q';
+exports.potd_using_custom_seed = potd_using_custom_seed;
+
+/**
+ * list 1 is always the same for both default and custom seeds
+ * because it only depends on the date.
+ */
+exports.test_list1 = {
+    '1479513600000': [ 34, 27, 16, 23, 30, 19, 8, 3 ],
+    '1479600000000': [ 14, 22, 24, 17, 13, 20, 7, 9 ],
+    '1479686400000': [ 15, 15, 24, 20, 24, 21, 6, 15 ],
+    '1479772800000': [ 13, 14, 27, 32, 10, 22, 5, 21 ],
+    '1480550400000': [ 23, 32, 24, 29, 29, 1, 27, 7 ],
+    '1480636800000': [ 14, 29, 10, 21, 29, 2, 26, 14 ],
+    '1480723200000': [ 34, 27, 16, 23, 30, 3, 25, 21 ]
+};
+
+
+/**
+ * Data for default seed lists.
+ */
+
+exports.test_list2_using_default_seed = [ 5, 8, 11, 2, 3, 5, 32, 0 ];
+
+exports.test_list3_using_default_seed = {
+    '1479513600000': [ 3, 35, 27, 25, 33, 24, 4, 3, 10, 16 ],
+    '1479600000000': [ 19, 30, 35, 19, 16, 25, 3, 9, 12, 0 ],
+    '1479686400000': [ 20, 23, 35, 22, 27, 26, 2, 15, 26, 4 ],
+    '1479772800000': [ 18, 22, 2, 34, 13, 27, 1, 21, 30, 0 ],
+    '1480550400000': [ 28, 4, 35, 31, 32, 6, 23, 7, 22, 16 ],
+    '1480636800000': [ 19, 1, 21, 23, 32, 7, 22, 14, 31, 1 ],
+    '1480723200000': [ 3, 35, 27, 25, 33, 8, 21, 21, 29, 25 ]
+};
+
+exports.test_list4_using_default_seed = {
+    '1479513600000': [ 33, 3, 3, 16, 24, 27, 25, 35, 10, 4 ],
+    '1479600000000': [ 19, 30, 35, 0, 19, 16, 25, 3, 9, 12 ],
+    '1479686400000': [ 15, 35, 26, 4, 27, 23, 2, 20, 22, 26 ],
+    '1479772800000': [ 18, 22, 2, 0, 34, 13, 27, 1, 21, 30 ],
+    '1480550400000': [ 32, 7, 28, 16, 6, 35, 31, 4, 22, 23 ],
+    '1480636800000': [ 1, 32, 23, 1, 19, 14, 31, 21, 7, 22 ],
+    '1480723200000': [ 8, 21, 35, 25, 29, 3, 33, 25, 27, 21 ]
+};
+
+exports.test_list5_using_default_seed = {
+    '1479513600000': [ 2, 11, 14, 18, 27, 32, 21, 35, 3, 5 ],
+    '1479600000000': [ 24, 2, 10, 2, 22, 21, 21, 3, 2, 13 ],
+    '1479686400000': [ 20, 7, 1, 6, 30, 28, 34, 20, 15, 27 ],
+    '1479772800000': [ 23, 30, 13, 2, 1, 18, 23, 1, 14, 31 ],
+    '1480550400000': [ 1, 15, 3, 18, 9, 4, 27, 4, 15, 24 ],
+    '1480636800000': [ 6, 4, 34, 3, 22, 19, 27, 21, 0, 23 ],
+    '1480723200000': [ 13, 29, 10, 27, 32, 8, 29, 25, 20, 22 ]
+};
+
+exports.test_num8_using_default_seed = {
+    '1479513600000': 4,
+    '1479600000000': 0,
+    '1479686400000': 2,
+    '1479772800000': 0,
+    '1480550400000': 4,
+    '1480636800000': 1,
+    '1480723200000': 5
+};
+
+exports.test_indexers_using_default_seed = {
+    '1479513600000': [ 2, 11, 14, 18, 27, 32, 21, 35, 3, 5 ],
+    '1479600000000': [ 24, 2, 10, 2, 22, 21, 21, 3, 2, 13 ],
+    '1479686400000': [ 20, 7, 1, 6, 30, 28, 34, 20, 15, 27 ],
+    '1479772800000': [ 23, 30, 13, 2, 1, 18, 23, 1, 14, 31 ],
+    '1480550400000': [ 1, 15, 3, 18, 9, 4, 27, 4, 15, 24 ],
+    '1480636800000': [ 6, 4, 34, 3, 22, 19, 27, 21, 0, 23 ],
+    '1480723200000': [ 13, 29, 10, 27, 32, 8, 29, 25, 20, 22 ]
+};
+
+
+
+/**
+ * Data for custom seed lists.
+ */
+
+exports.test_list2_using_custom_seed = [ 29, 30, 31, 32, 33, 34, 35, 0 ];
+
+exports.test_list3_using_custom_seed = {
+    '1479513600000': [ 27, 21, 11, 19, 27, 17, 7, 3, 24, 0 ],
+    '1479600000000': [ 7, 16, 19, 13, 10, 18, 6, 9, 26, 4 ],
+    '1479686400000': [ 8, 9, 19, 16, 21, 19, 5, 15, 4, 16 ],
+    '1479772800000': [ 6, 8, 22, 28, 7, 20, 4, 21, 8, 4 ],
+    '1480550400000': [ 16, 26, 19, 25, 26, 35, 26, 7, 0, 0 ],
+    '1480636800000': [ 7, 23, 5, 17, 26, 0, 25, 14, 9, 9 ],
+    '1480723200000': [ 27, 21, 11, 19, 27, 1, 24, 21, 7, 1 ]
+};
+
+exports.test_list4_using_custom_seed = {
+    '1479513600000': [ 27, 21, 11, 0, 19, 27, 17, 7, 3, 24 ],
+    '1479600000000': [ 9, 19, 26, 4, 10, 16, 6, 7, 13, 18 ],
+    '1479686400000': [ 21, 15, 8, 16, 19, 19, 16, 9, 4, 5 ],
+    '1479772800000': [ 21, 22, 8, 4, 7, 8, 4, 6, 28, 20 ],
+    '1480550400000': [ 16, 26, 19, 0, 25, 26, 35, 26, 7, 0 ],
+    '1480636800000': [ 25, 17, 0, 9, 23, 9, 5, 14, 26, 7 ],
+    '1480723200000': [ 21, 27, 19, 1, 27, 21, 7, 11, 1, 24 ]
+};
+
+exports.test_list5_using_custom_seed = {
+    '1479513600000': [ 20, 15, 6, 32, 16, 25, 16, 7, 4, 26 ],
+    '1479600000000': [ 2, 13, 21, 0, 7, 14, 5, 7, 14, 20 ],
+    '1479686400000': [ 14, 9, 3, 12, 16, 17, 15, 9, 5, 7 ],
+    '1479772800000': [ 14, 16, 3, 0, 4, 6, 3, 6, 29, 22 ],
+    '1480550400000': [ 9, 20, 14, 32, 22, 24, 34, 26, 8, 2 ],
+    '1480636800000': [ 18, 11, 31, 5, 20, 7, 4, 14, 27, 9 ],
+    '1480723200000': [ 14, 21, 14, 33, 24, 19, 6, 11, 2, 26 ]
+};
+
+exports.test_num8_using_custom_seed ={
+    '1479513600000': 0,
+    '1479600000000': 2,
+    '1479686400000': 4,
+    '1479772800000': 2,
+    '1480550400000': 0,
+    '1480636800000': 3,
+    '1480723200000': 1
+};
+
+exports.test_indexers_using_custom_seed = {
+    '1479513600000': [ 20, 15, 6, 32, 16, 25, 16, 7, 4, 26 ],
+    '1479600000000': [ 2, 13, 21, 0, 7, 14, 5, 7, 14, 20 ],
+    '1479686400000': [ 14, 9, 3, 12, 16, 17, 15, 9, 5, 7 ],
+    '1479772800000': [ 14, 16, 3, 0, 4, 6, 3, 6, 29, 22 ],
+    '1480550400000': [ 9, 20, 14, 32, 22, 24, 34, 26, 8, 2 ],
+    '1480636800000': [ 18, 11, 31, 5, 20, 7, 4, 14, 27, 9 ],
+    '1480723200000': [ 14, 21, 14, 33, 24, 19, 6, 11, 2, 26 ]
+};

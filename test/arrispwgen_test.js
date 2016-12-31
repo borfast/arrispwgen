@@ -1,5 +1,5 @@
 import tape from 'tape';
-import { using_default_seed, using_custom_seed, custom_seed } from './helper_data';
+import { potd_using_default_seed, potd_using_custom_seed, custom_seed } from './helper_data';
 import * as a from '../lib/arrispwgen';
 
 function simple_date(date) {
@@ -21,11 +21,11 @@ function test_single_passwords(assert, data, seed) {
 }
 
 tape('Should generate the correct password for the given days with the default seed', function(assert) {
-    test_single_passwords(assert, using_default_seed);
+    test_single_passwords(assert, potd_using_default_seed);
 });
 
 tape('Should generate the correct password for the given days with a custom seed', function (assert) {
-    test_single_passwords(assert, using_custom_seed, custom_seed);
+    test_single_passwords(assert, potd_using_custom_seed, custom_seed);
 });
 
 
@@ -67,13 +67,13 @@ function test_multiple_passwords(assert, data, start_index, end_index, seed) {
 }
 
 tape('Should generate the correct passwords for the given date interval, with the default seed', function (assert) {
-    test_multiple_passwords(assert, using_default_seed, 0, 3);
-    test_multiple_passwords(assert, using_default_seed, 4, 6);
+    test_multiple_passwords(assert, potd_using_default_seed, 0, 3);
+    test_multiple_passwords(assert, potd_using_default_seed, 4, 6);
     assert.end();
 });
 
 tape('Should generate the correct passwords for the given date interval, with a custom seed', function (assert) {
-    test_multiple_passwords(assert, using_custom_seed, 0, 3, custom_seed);
-    test_multiple_passwords(assert, using_custom_seed, 4, 6, custom_seed);
+    test_multiple_passwords(assert, potd_using_custom_seed, 0, 3, custom_seed);
+    test_multiple_passwords(assert, potd_using_custom_seed, 4, 6, custom_seed);
     assert.end();
 });
