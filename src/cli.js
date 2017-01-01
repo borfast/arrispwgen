@@ -14,8 +14,8 @@ let options = {
 
 let argv = require('minimist')(process.argv.slice(2), options);
 
-let dates = argv['_'];
-let seed = argv['seed'];
+const dates = argv['_'];
+const seed = argv['seed'];
 
 function print_usage() {
     console.log(chalk.yellow('\nUsage: ' + process.argv[0] + 'start_date [end_date] [--seed|-s custom_seed]\n'));
@@ -36,8 +36,8 @@ if (dates.length > 2) {
     process.exit(1);
 }
 
-let input_date_format = 'YYYY-MM-DD';
-let long_date_format = 'dddd, MMMM Do YYYY';
+const input_date_format = 'YYYY-MM-DD';
+const long_date_format = 'dddd, MMMM Do YYYY';
 let data = [];
 
 // If no date is given, default to outputting the password for the current date.

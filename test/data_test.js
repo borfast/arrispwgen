@@ -15,6 +15,7 @@ function simple_date(date) {
 
 tape('Should generate the correct "list1" for the given dates', function(assert) {
     test_dates.forEach(function (date) {
+        date = new Date(date);
         let l1 = list1(date);
         let timestamp = date.getTime();
 
@@ -47,6 +48,7 @@ tape('Should generate the correct "list2"', function(assert) {
 
 tape('Should generate the correct "list3"', function(assert) {
     test_dates.forEach(function (date) {
+        date = new Date(date);
         let l1 = list1(date);
         let timestamp = date.getTime();
 
@@ -71,6 +73,7 @@ tape('Should generate the correct "list3"', function(assert) {
 
 tape('Should generate the correct "list4"', function(assert) {
     test_dates.forEach(function (date) {
+        date = new Date(date);
         let l1 = list1(date);
         let timestamp = date.getTime();
 
@@ -97,6 +100,7 @@ tape('Should generate the correct "list4"', function(assert) {
 
 tape('Should generate the correct "list5"', function(assert) {
     test_dates.forEach(function (date) {
+        date = new Date(date);
         let l1 = list1(date);
         let timestamp = date.getTime();
 
@@ -125,6 +129,7 @@ tape('Should generate the correct "list5"', function(assert) {
 
 tape('Should generate the correct "num8"', function(assert) {
     test_dates.forEach(function (date) {
+        date = new Date(date);
         let l1 = list1(date);
         let timestamp = date.getTime();
 
@@ -151,17 +156,18 @@ tape('Should generate the correct "num8"', function(assert) {
 
 tape('Should generate the correct "indexers"', function(assert) {
     test_dates.forEach(function (date) {
+        date = new Date(date);
         let timestamp = date.getTime();
 
         assert.test('indexers using default seed for: ' + simple_date(date) + ' (timestamp: ' + timestamp + ')', function (test) {
             let idx = indexers(date, DEFAULT_SEED);
-            test.deepEqual(idx, test_indexers_using_default_seed[timestamp], 'indexers should be correct.');
+            test.deepEqual(idx, test_list5_using_default_seed[timestamp], 'indexers should be correct.');
             test.end();
         });
 
         assert.test('indexers using custom seed for: ' + simple_date(date) + ' (timestamp: ' + timestamp + ')', function (test) {
             let idx = indexers(date, custom_seed);
-            test.deepEqual(idx, test_indexers_using_custom_seed[timestamp], 'indexers should be correct.');
+            test.deepEqual(idx, test_list5_using_custom_seed[timestamp], 'indexers should be correct.');
             test.end();
         });
     });
