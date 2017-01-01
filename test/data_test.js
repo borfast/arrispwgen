@@ -2,8 +2,7 @@ import tape from 'tape';
 import { test_dates, custom_seed, test_list1, test_list2_using_default_seed, test_list2_using_custom_seed,
     test_list3_using_default_seed, test_list3_using_custom_seed, test_list4_using_default_seed,
     test_list4_using_custom_seed, test_list5_using_default_seed, test_list5_using_custom_seed,
-    test_num8_using_default_seed, test_num8_using_custom_seed, test_indexers_using_default_seed,
-    test_indexers_using_custom_seed
+    test_num8_using_default_seed, test_num8_using_custom_seed
 } from './helper_data';
 import { list1, list2, list3, list4, list5, num8, indexers } from '../src/data';
 import { DEFAULT_SEED } from '../src/constants';
