@@ -124,9 +124,17 @@ username and either the default password or a generated password. You can also
 try using `T!m3W4rn3rC4bl3` as the password along with the username
 `technician` (this probably only works if your ISP is Time Warner, though).
 
-#### 3. Go into hacker mode :)
+#### 3. Try making your modem use the default seed
 
-The third option is the tricky one, and involves a lot of fiddling with a command line and some more advanced tools. If that scares you, read on, it's not all over.
+Some modems might be tricked into using the default seed for their password generator if you disconnect the coaxial cable and reboot your modem. The theory is that the modem gets its settings from the ISP via TFTP (don't worry if you don't know what that is) and by disconnecting the cable you're effectively preventing the modem from reaching the ISP to get the settings, thus defaulting to the known seed.
+
+If the generated passwords don't work, it might be because your modem also didn't get the date and thinks it's January 1, 1970. The password for that date using the default seed is `XCA2Y12U71`. Give that one a try.
+
+One detail about this technique is that since your modem will be disconnected from the internet, you might not be able to do much with it. You can try logging in (assuming it works) and then reconnect the coaxial cable but that might force you to reauthenticate with the proper password for which you don't know the seed.
+
+#### 4. Go into hacker mode :)
+
+The last option is the tricky one, and involves a lot of fiddling with a command line and some more advanced tools. If that scares you, read on, it's not all over.
 
 If none of the above options worked, or if your modem just asks for a password of the day without any username, chances are your ISP changed the password generator seed in your modem.
 
