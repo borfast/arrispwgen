@@ -33,6 +33,10 @@ So I brought the matter into my own hands and I wrote my own [arris password of 
 
 You can use the [online generator](http://www.borfast.com/projects/arris-tm602a-password-of-the-day-generator/generator) to generate one or more passwords.
 
+#### Android app
+
+You can use my [Android application](https://play.google.com/store/apps/details?id=com.grounduphq.arrispwgen&rdid=com.grounduphq.arrispwgen). It's also [open source](https://github.com/borfast/arrispwgen-android). Pull requests are welcome!
+
 #### Bookmarklet
 
 Create a bookmark that uses the following code as the URL and whenever you click it, you'll get the password for the current day:
