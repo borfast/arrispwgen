@@ -6,8 +6,6 @@
 [![License](http://img.shields.io/npm/l/arrispwgen.svg?style=flat)](LICENSE)
 [![Build Status](https://travis-ci.org/borfast/arrispwgen.svg?branch=master)](https://travis-ci.org/borfast/arrispwgen)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/borfast/arrispwgen/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/borfast/arrispwgen/?branch=master)
-[![Dependency Status](https://david-dm.org/borfast/arrispwgen.svg)](https://david-dm.org/borfast/arrispwgen)
-[![devDependency Status](https://david-dm.org/borfast/arrispwgen/dev-status.svg)](https://david-dm.org/borfast/arrispwgen#info=devDependencies)
 
 Do you need an Arris modem password? Are you stuck with your Arris modem, in a message that says "in order to access advanced features you must enter the password of the day"? Then you came to the right place!
 
