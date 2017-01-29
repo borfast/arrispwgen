@@ -56,13 +56,19 @@ if (dates.length == 1) {
 } else {
     let start_date = moment(dates[0], input_date_format);
     let end_date = moment(dates[1], input_date_format);
-    let potd = arrispwgen.generate_multi(start_date.toDate(), end_date.toDate(), seed);
+    try {
+        let potd = arrispwgen.generate_multi(start_date.toDate(), end_date.toDate(), seed);
 
-    for (let p in potd) {
-        data.push({
-            date: moment(parseInt(p)).format(long_date_format),
-            password: potd[p]
-        });
+        for (let p in potd) {
+            data.push({
+                date: moment(parseInt(p)).format(long_date_format),
+                password: potd[p]
+            });
+        }
+    } catch (e) {
+        // TODO: Be more specific in the exception that we're catching.
+        console.log(chalk.red('The given dates are out of order.'));
+        print_usage();
     }
 }
 
