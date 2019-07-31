@@ -1,10 +1,10 @@
 {
   "name": "arrispwgen",
-  "version": "2.1.9",
+  "version": "2.1.11",
   "description": "Arris Password of the Day Generator",
   "main": "arrispwgen.js",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=12.4.0"
   },
   "bin": {
     "arrispwgen": "./lib/cli.js"
@@ -17,17 +17,16 @@
     "moment": "^2.17.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-node6": "^11.0.0",
-    "babel-tape-runner": "^2.0.1",
-    "eslint": "^3.11.1",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-tape-runner": "^3.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
     "faucet": "^0.0.1",
-    "istanbul": "^0.4.5",
-    "tape": "^4.6.3"
+    "tape": "^4.11.0"
   },
   "scripts": {
     "build": "babel -d lib src/",
