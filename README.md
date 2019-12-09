@@ -159,8 +159,6 @@ If you want to try it, you'll need to have Ruby installed as well as the Ruby `h
 
 This should work on Linux and Mac but I'm not sure about Windows. You will need to drop the "sudo" in the beginning if you're on Windows but I'm not sure about the rest.
 
-If all this is too much for you, you can [contact me](http://www.borfast.com/contact), send me the file and I'll try to find the seed for you.
-
 For the sake of honesty, I should mention that this file will likely contain your modem's admin password, as I mentioned above. I don't intend to hack anyone's modem, nor would I be able to, not only because I don't know the IP address but also because if it is configured properly, I shouldn't even be able to access its administration interface from the internet, but I think I should be honest about it.
 
 ### Extra information
