@@ -1,6 +1,7 @@
 import moment from 'moment';
-import {DEFAULT_SEED, ALPHANUM} from './constants';
-import {indexers} from './data';
+import {DEFAULT_SEED, ALPHANUM} from './constants.js';
+import {indexers} from './data.js';
+
 
 export function generate(date, seed = DEFAULT_SEED) {
     let idx = indexers(date, seed);

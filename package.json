@@ -1,51 +1,51 @@
 {
-  "name": "arrispwgen",
-  "version": "2.1.12",
+  "name": "@borfast/arrispwgen",
+  "version": "3.0.0",
   "description": "Arris Password of the Day Generator",
-  "main": "arrispwgen.js",
-  "engines": {
-    "node": ">=12.4.0"
-  },
-  "bin": {
-    "arrispwgen": "./lib/cli.js"
-  },
-  "dependencies": {
-    "chalk": "^1.1.3",
-    "columnify": "^1.5.4",
-    "minimist": "^1.2.0",
-    "moment": "^2.17.1"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "babel-tape-runner": "^3.0.0",
-    "eslint": "^6.0.1",
-    "eslint-config-standard": "^13.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "faucet": "^0.0.1",
-    "tape": "^4.11.0"
-  },
-  "scripts": {
-    "build": "babel -d lib src/",
-    "test": "yarn run build && babel-tape-runner \"test/*.js\" | faucet",
-    "prepublish": "yarn run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/borfast/arrispwgen.git"
-  },
   "keywords": [
     "arris",
     "arrispwd",
     "arrispwgen",
     "password-of-the-day"
   ],
-  "author": "Raúl Santos (https://www.borfast.com)",
-  "license": "MIT",
+  "homepage": "https://www.borfast.com/projects/arris-password-of-the-day-generator/",
   "bugs": {
     "url": "https://github.com/borfast/arrispwgen/issues"
   },
-  "homepage": "https://www.borfast.com/projects/arris-password-of-the-day-generator/"
+  "license": "MIT",
+  "author": "Raúl Santos (https://www.borfast.com)",
+  "main": "arrispwgen.js",
+  "type": "module",
+  "bin": {
+    "arrispwgen": "./lib/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borfast/arrispwgen.git"
+  },
+  "scripts": {
+    "build": "babel -d lib src/",
+    "test": "jest",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "*",
+    "columnify": "*",
+    "minimist": "*",
+    "moment": "*"
+  },
+  "devDependencies": {
+    "@babel/cli": "*",
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "babel-tape-runner": "*",
+    "eslint": "*",
+    "faucet": "*",
+    "jest": "*",
+    "tape": "*"
+  },
+  "engines": {
+    "node": ">=13.2.0",
+    "npm": ">=6"
+  }
 }

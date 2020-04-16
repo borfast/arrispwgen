@@ -1,18 +1,21 @@
 #!/usr/bin/env node
 // TODO: Allow setting the default seed for future use. Use this: https://www.npmjs.com/package/preferences
-let chalk = require('chalk');
-let moment = require('moment');
-var columnify = require('columnify');
-let c = require('./constants');
-let arrispwgen = require('./arrispwgen');
+import chalk from 'chalk';
+import moment from 'moment';
+import columnify from 'columnify';
+import minimist from 'minimist';
 
-let options = {
+import {DEFAULT_SEED} from './constants.js';
+import * as arrispwgen from './arrispwgen.js';
+
+
+const options = {
     string: ['seed', 's'],
     alias: {s: 'seed', h: 'help'},
-    default: {seed: c.DEFAULT_SEED}
+    default: {seed: DEFAULT_SEED}
 };
 
-let argv = require('minimist')(process.argv.slice(2), options);
+const argv = minimist(process.argv.slice(2), options);
 
 const dates = argv['_'];
 const seed = argv['seed'];
@@ -46,18 +49,18 @@ if (dates.length == 0) {
 }
 
 if (dates.length == 1) {
-    let date = moment(dates[0], input_date_format);
-    let long_date = date.format(long_date_format);
-    let potd = arrispwgen.generate(date.toDate(), seed);
+    const date = moment(dates[0], input_date_format);
+    const long_date = date.format(long_date_format);
+    const potd = arrispwgen.generate(date.toDate(), seed);
     data.push({
         date: long_date,
         password: potd
     });
 } else {
-    let start_date = moment(dates[0], input_date_format);
-    let end_date = moment(dates[1], input_date_format);
+    const start_date = moment(dates[0], input_date_format);
+    const end_date = moment(dates[1], input_date_format);
     try {
-        let potd = arrispwgen.generate_multi(start_date.toDate(), end_date.toDate(), seed);
+        const potd = arrispwgen.generate_multi(start_date.toDate(), end_date.toDate(), seed);
 
         for (let p in potd) {
             data.push({

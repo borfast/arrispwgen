@@ -1,6 +1,6 @@
 import tape from 'tape';
-import { potd_using_default_seed, potd_using_custom_seed, custom_seed } from './helper_data';
-import * as a from '../lib/arrispwgen';
+import { potd_using_default_seed, potd_using_custom_seed, custom_seed } from './helper_data.js';
+import * as a from '../src/arrispwgen.js';
 
 function simple_date(date) {
     return date.toLocaleDateString('en-GB', {day: '2-digit', month: '2-digit', year: 'numeric'});

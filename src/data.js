@@ -1,14 +1,15 @@
-import {TABLE1, TABLE2} from './constants';
+import {TABLE1, TABLE2} from './constants.js';
+
 
 export function list1(date) {
     // Last two digits of the year
-    let year = parseInt(date.getFullYear().toString(10).substr(2, 2), 10);
+    const year = parseInt(date.getFullYear().toString(10).substr(2, 2), 10);
 
     // Number of the month. The month in a Date object is zero-indexed,
     // i.e., January == 0, so we add 1 to satisfy the algorithm.
-    let month = date.getMonth() + 1;
+    const month = date.getMonth() + 1;
 
-    let day_of_month = date.getDate();
+    const day_of_month = date.getDate();
 
     // Day of the week. Normally 0 would be Sunday but we need it to be Monday.
     let day_of_week = date.getDay() - 1;
