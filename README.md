@@ -4,7 +4,7 @@
 
 **PLEASE READ THIS!**
 
-1 - In the past few years, internet service providers have been changing their modem configurations in ways that prevent this tool from working. There is nothing I can do about it. If it doesn't work with your modem and your modem is in the supported modems list, there's nothing I can do about it. Rating the app 1 star, complaining and being offensive is stupid and pointless.
+1 - In the past few years, some internet service providers have been changing their modem configurations in ways that prevent this tool from working. If it doesn't work with your modem and your modem is in the supported modems list, I'm afraid there's nothing I can do about it. Rating the app 1 star, complaining and being offensive is stupid and pointless.
 
 2 - I am not Spanish or from Latin America. Please don't assume I can speak Spanish or that I have to reply to you in Spanish.
 
