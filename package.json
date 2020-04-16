@@ -38,11 +38,8 @@
     "@babel/cli": "*",
     "@babel/core": "*",
     "@babel/preset-env": "*",
-    "babel-tape-runner": "*",
     "eslint": "*",
-    "faucet": "*",
-    "jest": "*",
-    "tape": "*"
+    "jest": "*"
   },
   "engines": {
     "node": ">=13.2.0",

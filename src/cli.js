@@ -25,7 +25,7 @@ function print_usage() {
     console.log('If you only want the password for a specific date, specify only \'start_date\'.');
     console.log('If \'end_date\' is also passed, a password for each day between \'start_date\' and \'end_date\' will be generated.');
     console.log('The --seed or -s parameter allows you to use a custom seed for the password generator.');
-    console.log('The dates should be specified in ISO 8601 format, i.e. "YYYY-MM-DD". Example for Christmas day 2016: "2016-12-25".')
+    console.log('The dates should be specified in ISO 8601 format, i.e. "YYYY-MM-DD". Example for Christmas day 2016: "2016-12-25".');
 }
 
 if (argv.hasOwnProperty('help')) {
