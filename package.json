@@ -1,12 +1,13 @@
 {
   "name": "@borfast/arrispwgen",
-  "version": "3.0.0",
-  "description": "Arris Password of the Day Generator",
+  "version": "3.0.3",
+  "description": "Arris Password of the Day Generator reusable library",
   "keywords": [
     "arris",
     "arrispwd",
     "arrispwgen",
-    "password-of-the-day"
+    "password-of-the-day",
+    "password of the day"
   ],
   "homepage": "https://www.borfast.com/projects/arris-password-of-the-day-generator/",
   "bugs": {
@@ -14,30 +15,27 @@
   },
   "license": "MIT",
   "author": "Raúl Santos (https://www.borfast.com)",
-  "main": "arrispwgen.js",
+  "main": "lib/arrispwgen.js",
   "type": "module",
-  "bin": {
-    "arrispwgen": "./lib/cli.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/borfast/arrispwgen.git"
   },
   "scripts": {
     "build": "babel -d lib src/",
+    "watch": "babel --watch -d lib src/",
     "test": "jest",
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "chalk": "*",
-    "columnify": "*",
-    "minimist": "*",
     "moment": "*"
   },
   "devDependencies": {
     "@babel/cli": "*",
     "@babel/core": "*",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
     "@babel/preset-env": "*",
+    "babel-jest": "^25.3.0",
     "eslint": "*",
     "jest": "*"
   },
