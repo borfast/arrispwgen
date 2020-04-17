@@ -1,4 +1,4 @@
-import {TABLE1, TABLE2} from './constants.js';
+import {_TABLE1, _TABLE2} from './constants.js';
 
 
 export function list1(date) {
@@ -20,7 +20,7 @@ export function list1(date) {
     let list1 = [];
 
     for (let i = 0; i <= 4; i++) {
-        list1[i] = TABLE1[day_of_week][i];
+        list1[i] = _TABLE1[day_of_week][i];
     }
 
     list1[5] = day_of_month;
@@ -69,7 +69,7 @@ export function list4(l3) {
     let list4 = [];
 
     for (let i = 0; i <= 9; i++) {
-        list4[i] = l3[TABLE2[num8(l3)][i]];
+        list4[i] = l3[_TABLE2[num8(l3)][i]];
     }
 
     return list4;
