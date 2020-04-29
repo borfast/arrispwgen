@@ -1,6 +1,6 @@
 {
   "name": "@borfast/arrispwgen",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "Arris Password of the Day Generator reusable library",
   "keywords": [
     "arris",
@@ -9,7 +9,7 @@
     "password-of-the-day",
     "password of the day"
   ],
-  "homepage": "https://www.borfast.com/projects/arris-password-of-the-day-generator/",
+  "homepage": "https://arrispwgen.borfast.com",
   "bugs": {
     "url": "https://github.com/borfast/arrispwgen/issues"
   },
