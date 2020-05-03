@@ -1,6 +1,6 @@
 {
   "name": "@borfast/arrispwgen",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Arris Password of the Day Generator reusable library",
   "keywords": [
     "arris",

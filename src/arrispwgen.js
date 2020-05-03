@@ -26,11 +26,11 @@ export function generate_multi(startdate, enddate, seed = _DEFAULT_SEED) {
     let password_list = [];
     let date = startdate;
     for (let i = 0; i < days; i++) {
+        const this_date = new Date(new Date(date).setDate(date.getDate() + i))
         password_list.push({
-            'date': date,
-            'password': generate(date, seed)
+            'date': this_date,
+            'password': generate(this_date, seed)
         });
-        date.setDate(date.getDate() + 1);
     }
 
     return password_list;

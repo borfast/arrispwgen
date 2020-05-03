@@ -1,6 +1,7 @@
 import {custom_seed} from './helper_data.js';
 import * as a from '../src/arrispwgen.js';
 import {custom_seed_potds, default_seed_potds, test_dates} from './helper_data.js';
+import {expect, test} from "@jest/globals";
 
 
 test.each([
@@ -41,10 +42,15 @@ test.each([
     [custom_seed_potds, 4, 6, custom_seed]
 ])('Should generate the correct passwords for the given date interval', (potd_list, start_index, end_index, seed = undefined) => {
     const count = end_index - start_index + 1;
-    const potd = a.generate_multi(new Date(test_dates[start_index]), new Date(test_dates[end_index]), seed);
+    const start_date = new Date(test_dates[start_index]);
+    const end_date = new Date(test_dates[end_index]);
+    const potd = a.generate_multi(start_date, end_date, seed);
 
     expect(potd.length).toBe(count);
     for (let i = start_index; i <= end_index; i++) {
-        expect(potd[i - start_index]['password']).toBe(potd_list[i]);
+        const date = potd[i - start_index]['date'];
+        const password = potd[i - start_index]['password'];
+        expect(date).toEqual(new Date(test_dates[i]));
+        expect(password).toBe(potd_list[i]);
     }
 });
