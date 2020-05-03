@@ -31,7 +31,6 @@ For a list of supported modems, troubleshooting options and more information, pl
 
 Install with `npm install @borfast/arrispwgen`.
 
-
 The API consists of only two functions: `generate()`, to generate a single password for a given date, and `generate_multi()`, to generate multiple passwords for a range of dates.
 
 `generate()` has one required parameter and one optional parameter:
@@ -47,4 +46,4 @@ It returns a string which is the password for the given date.
 * `enddate` (required): a `Date` object representing the _last_ date for which a password should be generated;
 * `seed` (optional): a string to be used as the seed for the password generator.
 
-It returns a dictionary/object of which the values are the passwords for each given date and the keys are the [primitive value](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf) of the corresponding `Date` object.
+It returns an array of objects with two fields: `date`, a `Date` object, and `password`, the password for the corresponding date.

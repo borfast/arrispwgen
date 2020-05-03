@@ -57,8 +57,7 @@ export function list3(l1, l2) {
         list3[i] = (((l1[i] + l2[i])) % 36);
     }
 
-    list3[8] = (list3[0] + list3[1] + list3[2] + list3[3] + list3[4] +
-        list3[5] + list3[6] + list3[7]) % 36;
+    list3[8] = (list3[0] + list3[1] + list3[2] + list3[3] + list3[4] + list3[5] + list3[6] + list3[7]) % 36;
 
     list3[9] = Math.round(Math.pow(num8(list3), 2));
 

@@ -1,5 +1,4 @@
-import moment from 'moment';
-import {_DEFAULT_SEED, _ALPHANUM} from './constants.js';
+import {_ALPHANUM, _DEFAULT_SEED} from './constants.js';
 import {indexers} from './data.js';
 
 
@@ -22,14 +21,16 @@ export function generate_multi(startdate, enddate, seed = _DEFAULT_SEED) {
         throw 'The start date must precede the end date.';
     }
 
-    const days = 1 + Math.ceil(moment(enddate).diff(startdate, 'days', true));
+    const days = 1 + Math.ceil((enddate - startdate) / (1000*60*60*24));
 
-    // Now let's generate one password for each day
-    let password_list = {};
-    let date = moment(startdate);
+    let password_list = [];
+    let date = startdate;
     for (let i = 0; i < days; i++) {
-        password_list[date.valueOf()] = generate(date.toDate(), seed);
-        date.add(1, 'day');
+        password_list.push({
+            'date': date,
+            'password': generate(date, seed)
+        });
+        date.setDate(date.getDate() + 1);
     }
 
     return password_list;
