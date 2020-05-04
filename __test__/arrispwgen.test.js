@@ -1,7 +1,6 @@
-import {custom_seed} from './helper_data.js';
+import {custom_seed, custom_seed_potds, default_seed_potds, test_dates} from './helper_data.js';
 import * as a from '../src/arrispwgen.js';
-import {custom_seed_potds, default_seed_potds, test_dates} from './helper_data.js';
-import {expect, test} from "@jest/globals";
+import {expect, test} from '@jest/globals';
 
 
 test.each([
