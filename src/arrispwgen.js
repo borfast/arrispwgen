@@ -16,9 +16,16 @@ export function generate(date, seed = _DEFAULT_SEED) {
     return password_of_the_day.join('');
 }
 
+export class InvalidDateRangeError extends Error {
+    constructor(msg) {
+        super(msg);
+        this.message = 'The start date must precede the end date.';
+    }
+}
+
 export function generate_multi(startdate, enddate, seed = _DEFAULT_SEED) {
     if (startdate > enddate) {
-        throw 'The start date must precede the end date.';
+        throw new InvalidDateRangeError();
     }
 
     const days = 1 + Math.ceil((enddate - startdate) / (1000*60*60*24));
@@ -26,7 +33,7 @@ export function generate_multi(startdate, enddate, seed = _DEFAULT_SEED) {
     let password_list = [];
     let date = startdate;
     for (let i = 0; i < days; i++) {
-        const this_date = new Date(new Date(date).setDate(date.getDate() + i))
+        const this_date = new Date(new Date(date).setDate(date.getDate() + i));
         password_list.push({
             'date': this_date,
             'password': generate(this_date, seed)

@@ -21,7 +21,7 @@ test('Should throw an exception if start date is after end date', () => {
         a.generate_multi(d1, d2);
     };
 
-    expect(fn).toThrow('The start date must precede the end date.');
+    expect(fn).toThrow(a.InvalidDateRangeError);
 });
 
 
