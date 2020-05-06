@@ -69,14 +69,10 @@ export default {
     // ],
 
     // An array of file extensions your modules use
-    // moduleFileExtensions: [
-    //   "js",
-    //   "json",
-    //   "jsx",
-    //   "ts",
-    //   "tsx",
-    //   "node"
-    // ],
+    moduleFileExtensions: [
+        'js',
+        'ts'
+    ],
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     // moduleNameMapper: {},
@@ -91,7 +87,7 @@ export default {
     // notifyMode: "failure-change",
 
     // A preset that is used as a base for Jest's configuration
-    // preset: undefined,
+    preset: 'ts-jest',
 
     // Run tests from one or more projects
     // projects: undefined,
@@ -152,7 +148,7 @@ export default {
     ],
 
     // The regexp pattern or array of patterns that Jest uses to detect test files
-    // testRegex: [],
+    'testRegex': '/__tests__/.*\\.test\\.(ts|tsx|js)$',
 
     // This option allows the use of a custom results processor
     // testResultsProcessor: undefined,
@@ -167,7 +163,9 @@ export default {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    // transform: undefined,
+    'transform': {
+        '\\.(ts|tsx)$': 'ts-jest'
+    },
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [

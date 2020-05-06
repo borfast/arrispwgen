@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "target": "ES2020",
+    "alwaysStrict": true,
+    "strict": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}

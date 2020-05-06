@@ -3,7 +3,7 @@
 // not produce an error and will happily and *silently* (yes...) give you a
 // Date object representing the 20th of *January*, 2016. Nice, right?... :(
 // These dates are stored as timestamps so they can be used to index
-export const test_dates = [
+export const testDates: number[] = [
     (new Date(2016, 9, 19)).getTime(),
     (new Date(2016, 9, 20)).getTime(),
     (new Date(2016, 9, 21)).getTime(),
@@ -13,7 +13,7 @@ export const test_dates = [
     (new Date(2016, 10, 3)).getTime()
 ];
 
-export const default_seed_potds = [
+export const defaultSeedPotds: string[] = [
     'RZ631QL7H4',
     '730B78VQPT',
     '13UITQJ132',
@@ -23,9 +23,9 @@ export const default_seed_potds = [
     'N776Z9GSO9'
 ];
 
-export const custom_seed = 'ABCDEFGHIJ';
+export const customSeed: string = 'ABCDEFGHIJ';
 
-export const custom_seed_potds = [
+export const customSeedPotds: string[] = [
     'ZJC551QLMO',
     'BZLLEEPPKS',
     '0H0WEOI4WQ',
@@ -41,7 +41,7 @@ export const custom_seed_potds = [
  * list 1 is always the same for both default and custom seeds
  * because it only depends on the date.
  */
-export const test_list1 = [
+export const testList1: number[][] = [
     [ 29, 14, 32, 29, 24, 19, 7, 21 ],
     [ 23, 32, 24, 29, 29, 20, 6, 26 ],
     [ 14, 29, 10, 21, 29, 21, 5, 31 ],
@@ -53,9 +53,9 @@ export const test_list1 = [
 
 // "list" values using default seed.
 
-export const test_list2_using_default_seed = [ 5, 8, 11, 2, 3, 5, 32, 0 ];
+export const testList2UsingDefaultSeed: number[] = [ 5, 8, 11, 2, 3, 5, 32, 0 ];
 
-export const test_list3_using_default_seed = [
+export const testList3UsingDefaultSeed: number[][] = [
     [ 34, 22, 7, 31, 27, 24, 3, 21, 25, 1 ],
     [ 28, 4, 35, 31, 32, 25, 2, 26, 3, 9 ],
     [ 19, 1, 21, 23, 32, 26, 1, 31, 10, 16 ],
@@ -65,7 +65,7 @@ export const test_list3_using_default_seed = [
     [ 28, 4, 35, 31, 32, 8, 20, 18, 32, 4 ]
 ];
 
-export const test_list4_using_default_seed = [
+export const testList4UsingDefaultSeed: number[][] = [
     [ 22, 27, 31, 1, 34, 21, 25, 7, 24, 3 ],
     [ 2, 31, 25, 9, 4, 3, 35, 26, 32, 28 ],
     [ 32, 31, 19, 16, 26, 21, 23, 1, 10, 1 ],
@@ -75,7 +75,7 @@ export const test_list4_using_default_seed = [
     [ 18, 35, 32, 4, 32, 4, 20, 28, 31, 8 ]
 ];
 
-export const test_list5_using_default_seed = [
+export const testList5UsingDefaultSeed: number[][] = [
     [ 27, 35, 6, 3, 1, 26, 21, 7, 17, 4 ],
     [ 7, 3, 0, 11, 7, 8, 31, 26, 25, 29 ],
     [ 1, 3, 30, 18, 29, 26, 19, 1, 3, 2 ],
@@ -85,12 +85,12 @@ export const test_list5_using_default_seed = [
     [ 23, 7, 7, 6, 35, 9, 16, 28, 24, 9 ]
 ];
 
-export const test_num8_using_default_seed = [1, 3, 4, 0, 3, 5, 2];
+export const testNum8UsingDefaultSeed: number[] = [1, 3, 4, 0, 3, 5, 2];
 
 // "list" values using custom seed.
-export const test_list2_using_custom_seed = [ 29, 30, 31, 32, 33, 34, 35, 0 ];
+export const testList2UsingCustomSeed: number[] = [ 29, 30, 31, 32, 33, 34, 35, 0 ];
 
-export const test_list3_using_custom_seed = [
+export const testList3UsingCustomSeed: number[][] = [
     [ 22, 8, 27, 25, 21, 17, 6, 21, 3, 9 ],
     [ 16, 26, 19, 25, 26, 18, 5, 26, 17, 25 ],
     [ 7, 23, 5, 17, 26, 19, 4, 31, 24, 0 ],
@@ -100,7 +100,7 @@ export const test_list3_using_custom_seed = [
     [ 16, 26, 19, 25, 26, 1, 23, 18, 10, 16 ]
 ];
 
-export const test_list4_using_custom_seed = [
+export const testList4UsingCustomSeed: number[][] = [
     [ 6, 25, 17, 9, 8, 3, 27, 21, 21, 22 ],
     [ 18, 5, 26, 25, 17, 16, 26, 25, 19, 26 ],
     [ 7, 23, 5, 0, 17, 26, 19, 4, 31, 24 ],
@@ -110,7 +110,7 @@ export const test_list4_using_custom_seed = [
     [ 26, 18, 16, 16, 1, 19, 25, 26, 10, 23 ]
 ];
 
-export const test_list5_using_custom_seed = [
+export const testList5UsingCustomSeed: number[][] = [
     [ 35, 19, 12, 5, 5, 1, 26, 21, 22, 24 ],
     [ 11, 35, 21, 21, 14, 14, 25, 25, 20, 28 ],
     [ 0, 17, 0, 32, 14, 24, 18, 4, 32, 26 ],
@@ -120,4 +120,4 @@ export const test_list5_using_custom_seed = [
     [ 19, 12, 11, 12, 34, 17, 24, 26, 11, 25 ]
 ];
 
-export const test_num8_using_custom_seed = [3, 5, 0, 2, 5, 1, 4];
+export const testNum8UsingCustomSeed: number[] = [3, 5, 0, 2, 5, 1, 4];

@@ -25,20 +25,20 @@
     "url": "git+https://github.com/borfast/arrispwgen.git"
   },
   "scripts": {
-    "build": "babel -d lib src/",
-    "watch": "babel --watch -d lib src/",
-    "test": "jest",
-    "prepublishOnly": "npm run build"
+    "build": "tsc --project tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint -c .eslintrc.cjs 'src/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'",
+    "pretest": "npm run lint",
+    "test": "jest"
   },
   "devDependencies": {
-    "@babel/cli": "*",
-    "@babel/core": "*",
-    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
-    "@babel/preset-env": "*",
     "@jest/globals": "^25.5.2",
-    "babel-jest": "^25.3.0",
-    "eslint": "*",
-    "jest": "*"
+    "@types/jest": "^25.2.1",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "jest": "^26.0.1",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
   },
   "engines": {
     "node": ">=13.2.0",
