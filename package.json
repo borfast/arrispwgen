@@ -1,6 +1,6 @@
 {
   "name": "@borfast/arrispwgen",
-  "version": "4.0.2",
+  "version": "5.0.0",
   "description": "Arris Password of the Day Generator reusable library",
   "keywords": [
     "arris",
@@ -15,10 +15,11 @@
   },
   "license": "MIT",
   "author": "Raúl Santos (https://www.borfast.com)",
-  "main": "lib/arrispwgen.js",
+  "main": "./lib/arrispwgen.js",
   "type": "module",
   "files": [
-    "/lib"
+    "/lib",
+    "./lib/arrispwgen.d.ts"
   ],
   "repository": {
     "type": "git",

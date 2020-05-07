@@ -5,8 +5,8 @@
     "module": "ESNext",
     "alwaysStrict": true,
     "strict": true,
-    "moduleResolution": "node",
     "types": ["node"],
+    "declaration": true,
     "plugins": [
       {
         "transform": "@zoltu/typescript-transformer-append-js-extension/output/index.js",
