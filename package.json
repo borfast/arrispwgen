@@ -37,7 +37,7 @@
     "@types/jest": "^25.2.3",
     "@typescript-eslint/parser": "^2.34.0",
     "@zoltu/typescript-transformer-append-js-extension": "^1.0.1",
-    "eslint": "^6.8.0",
+    "eslint": "^9.32.0",
     "jest": "^29.7.0",
     "ts-jest": "^25.5.1",
     "ttypescript": "^1.5.12",
