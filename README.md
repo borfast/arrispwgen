@@ -13,6 +13,8 @@
 [![NPM Version](https://img.shields.io/npm/v/@borfast/arrispwgen.svg?style=flat)](https://npmjs.org/package/@borfast/arrispwgen)
 ![License](https://img.shields.io/github/license/borfast/arrispwgen)
 [![CI](https://github.com/borfast/arrispwgen/actions/workflows/ci.yml/badge.svg)](https://github.com/borfast/arrispwgen/actions/workflows/ci.yml)
+[![Coverage](https://codecov.io/gh/borfast/arrispwgen/branch/master/graph/badge.svg)](https://codecov.io/gh/borfast/arrispwgen)
+[![Maintainability](https://qlty.sh/gh/borfast/projects/arrispwgen/maintainability.svg)](https://qlty.sh/gh/borfast/projects/arrispwgen)
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B61NQ8A)
 
 Do you need an Arris modem password? Are you stuck with your Arris modem, in a message that says "in order to access advanced features you must enter the password of the day"? Then you came to the right place!

@@ -12,6 +12,10 @@ jobs:
   node:
     name: Node ${{ matrix.node-version }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # Required for tokenless (OIDC) coverage upload to Codecov.
+      id-token: write
     strategy:
       matrix:
         node-version: ['24', 'latest']
@@ -25,7 +29,12 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run build
-      - run: npx vitest run
+      - run: npx vitest run --coverage
+      - uses: codecov/codecov-action@v5
+        if: matrix.node-version == '24'
+        with:
+          use_oidc: true
+          files: coverage/lcov.info
 
   bun:
     name: Bun (optional)
