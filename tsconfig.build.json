@@ -3,7 +3,7 @@
     "compilerOptions": {
         "noEmit": false,
         "rootDir": "./src",
-        "outDir": "./lib",
+        "outDir": "./dist",
         "declaration": true
     },
     "exclude": ["src/**/*.test.ts", "src/helper_data.ts"]
