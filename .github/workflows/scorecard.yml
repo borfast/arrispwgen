@@ -1,0 +1,33 @@
+name: Scorecard
+
+on:
+  # Re-evaluate when branch protection / rulesets change.
+  branch_protection_rule:
+  schedule:
+    - cron: '30 6 * * 1'
+  push:
+    branches: [master]
+
+permissions: read-all
+
+jobs:
+  analysis:
+    name: Scorecard analysis
+    runs-on: ubuntu-latest
+    permissions:
+      # Upload SARIF results to the repository Security tab.
+      security-events: write
+      # Publish results to the public Scorecard API (enables the badge).
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: ossf/scorecard-action@v2
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          publish_results: true
+      - uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif
