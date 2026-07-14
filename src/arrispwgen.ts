@@ -1,6 +1,5 @@
-import {_ALPHANUM, _DEFAULT_SEED} from './constants.js';
-import {indexers} from './data.js';
-
+import { _ALPHANUM, _DEFAULT_SEED } from './constants.js';
+import { indexers } from './data.js';
 
 export function generate(date: Date, seed: string = _DEFAULT_SEED) {
     const idx = indexers(date, seed);
@@ -22,19 +21,29 @@ export class InvalidDateRangeError extends Error {
     }
 }
 
-export function generate_multi(startDate: Date, endDate: Date, seed: string = _DEFAULT_SEED) {
+export function generate_multi(
+    startDate: Date,
+    endDate: Date,
+    seed: string = _DEFAULT_SEED,
+) {
     if (startDate > endDate) {
         throw new InvalidDateRangeError();
     }
 
-    const days = 1 + Math.ceil((endDate.getTime() - startDate.getTime()) / (1000*60*60*24));
+    const days =
+        1 +
+        Math.ceil(
+            (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24),
+        );
 
     const passwordList = [];
     for (let i = 0; i < days; i++) {
-        const date = new Date(new Date(startDate).setDate(startDate.getDate() + i));
+        const date = new Date(
+            new Date(startDate).setDate(startDate.getDate() + i),
+        );
         passwordList.push({
-            'date': date,
-            'password': generate(date, seed)
+            date: date,
+            password: generate(date, seed),
         });
     }
 

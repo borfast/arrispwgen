@@ -1,3 +1,14 @@
+import { expect, test } from 'vitest';
+import { _DEFAULT_SEED } from '../src/constants.js';
+import {
+    indexers,
+    list1,
+    list2,
+    list3,
+    list4,
+    list5,
+    num8,
+} from '../src/data.js';
 import {
     customSeed,
     testDates,
@@ -11,12 +22,8 @@ import {
     testList5UsingCustomSeed,
     testList5UsingDefaultSeed,
     testNum8UsingCustomSeed,
-    testNum8UsingDefaultSeed
+    testNum8UsingDefaultSeed,
 } from './helper_data.js';
-import {indexers, list1, list2, list3, list4, list5, num8} from '../src/data.js';
-import {_DEFAULT_SEED} from '../src/constants.js';
-import {expect, test} from 'vitest';
-
 
 test('Should generate the correct "list1" for the given dates', () => {
     testDates.forEach((date: number, idx: number) => {
@@ -26,21 +33,19 @@ test('Should generate the correct "list1" for the given dates', () => {
     });
 });
 
-
 test.each([
     [_DEFAULT_SEED, testList2UsingDefaultSeed],
-    [customSeed, testList2UsingCustomSeed]
+    [customSeed, testList2UsingCustomSeed],
 ])('Should generate the correct "list2"', (seed: string, expected: string[]) => {
     const l2 = list2(seed);
     expect(l2).toEqual(expect.arrayContaining(expected));
 });
 
-
 test.each([
     [_DEFAULT_SEED, testList3UsingDefaultSeed],
-    [customSeed, testList3UsingCustomSeed]
+    [customSeed, testList3UsingCustomSeed],
 ])('Should generate the correct "list3"', (seed: string, expected: number[][]) => {
-    testDates.forEach( (date: number, idx: number) => {
+    testDates.forEach((date: number, idx: number) => {
         const d = new Date(date);
         const l1 = list1(d);
         const l2 = list2(seed);
@@ -49,12 +54,11 @@ test.each([
     });
 });
 
-
 test.each([
     [_DEFAULT_SEED, testList4UsingDefaultSeed],
-    [customSeed, testList4UsingCustomSeed]
+    [customSeed, testList4UsingCustomSeed],
 ])('Should generate the correct "list4"', (seed: string, expected: number[][]) => {
-    testDates.forEach( (date: number, idx: number) => {
+    testDates.forEach((date: number, idx: number) => {
         const d = new Date(date);
         const l1 = list1(d);
         const l2 = list2(seed);
@@ -64,12 +68,11 @@ test.each([
     });
 });
 
-
 test.each([
     [_DEFAULT_SEED, testList5UsingDefaultSeed],
-    [customSeed, testList5UsingCustomSeed]
+    [customSeed, testList5UsingCustomSeed],
 ])('Should generate the correct "list5"', (seed: string, expected: number[][]) => {
-    testDates.forEach( (date: number, idx: number) => {
+    testDates.forEach((date: number, idx: number) => {
         const d = new Date(date);
         const l1 = list1(d);
         const l2 = list2(seed);
@@ -80,12 +83,11 @@ test.each([
     });
 });
 
-
 test.each([
     [_DEFAULT_SEED, testNum8UsingDefaultSeed],
-    [customSeed, testNum8UsingCustomSeed]
+    [customSeed, testNum8UsingCustomSeed],
 ])('Should generate the correct "num8"', (seed: string, expected: number[][]) => {
-    testDates.forEach( (date: number, idx: number) => {
+    testDates.forEach((date: number, idx: number) => {
         const d = new Date(date);
         const l1 = list1(d);
         const l2 = list2(seed);
@@ -95,12 +97,11 @@ test.each([
     });
 });
 
-
 test.each([
     [_DEFAULT_SEED, testList5UsingDefaultSeed],
-    [customSeed, testList5UsingCustomSeed]
+    [customSeed, testList5UsingCustomSeed],
 ])('Should generate the correct "indexers"', (seed: string, expected: number[][]) => {
-    testDates.forEach( (date, i) => {
+    testDates.forEach((date, i) => {
         const d = new Date(date);
         const index = indexers(d, seed);
         expect(index).toEqual(expect.arrayContaining(expected[i]));

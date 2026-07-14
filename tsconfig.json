@@ -1,14 +1,12 @@
 {
-  "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./lib",
-    "target": "es2023",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "strict": true,
-    "declaration": true
-  },
-  "include": [
-    "./src/**/*"
-  ]
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./lib",
+        "target": "es2023",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "strict": true,
+        "declaration": true
+    },
+    "include": ["./src/**/*"]
 }

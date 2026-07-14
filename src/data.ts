@@ -1,5 +1,4 @@
-import {_TABLE1, _TABLE2} from './constants.js';
-
+import { _TABLE1, _TABLE2 } from './constants.js';
 
 export function list1(date: Date): number[] {
     // Last two digits of the year
@@ -25,10 +24,10 @@ export function list1(date: Date): number[] {
 
     list1Result[5] = dayOfMonth;
 
-    if (((year + month) - dayOfMonth) < 0) {
-        list1Result[6] = (((year + month) - dayOfMonth) + 36) % 36;
+    if (year + month - dayOfMonth < 0) {
+        list1Result[6] = (year + month - dayOfMonth + 36) % 36;
     } else {
-        list1Result[6] = ((year + month) - dayOfMonth) % 36;
+        list1Result[6] = (year + month - dayOfMonth) % 36;
     }
 
     list1Result[7] = (((3 + ((year + month) % 12)) * dayOfMonth) % 37) % 36;
@@ -40,7 +39,7 @@ export function list2(seed: string): number[] {
     const list2Result = [];
 
     for (let i = 0; i <= 7; i++) {
-        list2Result[i] = (seed.charCodeAt(i)) % 36;
+        list2Result[i] = seed.charCodeAt(i) % 36;
     }
 
     return list2Result;
@@ -54,12 +53,21 @@ export function list3(l1: number[], l2: number[]): number[] {
     const list3Result = [];
 
     for (let i = 0; i <= 7; i++) {
-        list3Result[i] = (((l1[i] + l2[i])) % 36);
+        list3Result[i] = (l1[i] + l2[i]) % 36;
     }
 
-    list3Result[8] = (list3Result[0] + list3Result[1] + list3Result[2] + list3Result[3] + list3Result[4] + list3Result[5] + list3Result[6] + list3Result[7]) % 36;
+    list3Result[8] =
+        (list3Result[0] +
+            list3Result[1] +
+            list3Result[2] +
+            list3Result[3] +
+            list3Result[4] +
+            list3Result[5] +
+            list3Result[6] +
+            list3Result[7]) %
+        36;
 
-    list3Result[9] = Math.round(Math.pow(num8(list3Result), 2));
+    list3Result[9] = Math.round(num8(list3Result) ** 2);
 
     return list3Result;
 }

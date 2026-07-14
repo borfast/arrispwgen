@@ -1,18 +1,23 @@
-import {customSeed, customSeedPotds, defaultSeedPotds, testDates} from './helper_data.js';
+import { expect, test } from 'vitest';
 import * as a from '../src/arrispwgen.js';
-import {expect, test} from 'vitest';
-
+import {
+    customSeed,
+    customSeedPotds,
+    defaultSeedPotds,
+    testDates,
+} from './helper_data.js';
 
 test.each([
     [defaultSeedPotds],
-    [customSeedPotds, customSeed]
-])('Should 22222 generate the correct password for the given days with the given seed', (potd: string[], seed: string|undefined = undefined) => {
-    testDates.forEach( (date, i) => {
+    [customSeedPotds, customSeed],
+])('Should 22222 generate the correct password for the given days with the given seed', (potd: string[], seed:
+    | string
+    | undefined = undefined) => {
+    testDates.forEach((date, i) => {
         const password = a.generate(new Date(date), seed);
         expect(password).toBe(potd[i]);
     });
 });
-
 
 test('Should throw an exception if start date is after end date', () => {
     const fn = () => {
@@ -24,7 +29,6 @@ test('Should throw an exception if start date is after end date', () => {
     expect(fn).toThrow(a.InvalidDateRangeError);
 });
 
-
 test('Should generate a single password if the date interval is just one day', () => {
     const d1 = new Date(2016, 1, 5);
     const d2 = new Date(2016, 1, 5);
@@ -33,13 +37,14 @@ test('Should generate a single password if the date interval is just one day', (
     expect(potd.length).toBe(1);
 });
 
-
 test.each([
     [defaultSeedPotds, 0, 3],
     [defaultSeedPotds, 4, 6],
     [customSeedPotds, 0, 3, customSeed],
-    [customSeedPotds, 4, 6, customSeed]
-])('Should generate the correct passwords for the given date interval', (potdList: string[], startIndex: number, endIndex: number, seed: string|undefined = undefined) => {
+    [customSeedPotds, 4, 6, customSeed],
+])('Should generate the correct passwords for the given date interval', (potdList: string[], startIndex: number, endIndex: number, seed:
+    | string
+    | undefined = undefined) => {
     const count = endIndex - startIndex + 1;
     const startDate = new Date(testDates[startIndex]);
     const endDate = new Date(testDates[endIndex]);
