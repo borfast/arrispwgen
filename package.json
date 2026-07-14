@@ -26,7 +26,7 @@
     "url": "git+https://github.com/borfast/arrispwgen.git"
   },
   "scripts": {
-    "build": "ttsc --project tsconfig.json",
+    "build": "tsc --project tsconfig.json",
     "prepublishOnly": "npm run build",
     "lint": "eslint -c .eslintrc.cjs 'src/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'",
     "pretest": "npm run lint",
@@ -34,10 +34,8 @@
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^2.34.0",
-    "@zoltu/typescript-transformer-append-js-extension": "^1.0.1",
     "eslint": "^6.8.0",
-    "ttypescript": "^1.5.12",
-    "typescript": "^3.9.7",
+    "typescript": "^7.0.2",
     "vitest": "^4.1.10"
   },
   "engines": {

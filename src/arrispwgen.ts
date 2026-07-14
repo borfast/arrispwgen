@@ -1,5 +1,5 @@
-import {_ALPHANUM, _DEFAULT_SEED} from './constants';
-import {indexers} from './data';
+import {_ALPHANUM, _DEFAULT_SEED} from './constants.js';
+import {indexers} from './data.js';
 
 
 export function generate(date: Date, seed: string = _DEFAULT_SEED) {

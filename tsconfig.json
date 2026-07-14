@@ -1,18 +1,12 @@
 {
   "compilerOptions": {
+    "rootDir": "./src",
     "outDir": "./lib",
-    "target": "ESNext",
-    "module": "ESNext",
-    "alwaysStrict": true,
+    "target": "es2023",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "strict": true,
-    "types": ["node"],
-    "declaration": true,
-    "plugins": [
-      {
-        "transform": "@zoltu/typescript-transformer-append-js-extension/output/index.js",
-        "after": true
-      }
-    ]
+    "declaration": true
   },
   "include": [
     "./src/**/*"

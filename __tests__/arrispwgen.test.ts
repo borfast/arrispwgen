@@ -1,5 +1,5 @@
-import {customSeed, customSeedPotds, defaultSeedPotds, testDates} from './helper_data';
-import * as a from '../src/arrispwgen';
+import {customSeed, customSeedPotds, defaultSeedPotds, testDates} from './helper_data.js';
+import * as a from '../src/arrispwgen.js';
 import {expect, test} from 'vitest';
 
 

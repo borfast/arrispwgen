@@ -1,4 +1,4 @@
-import {_TABLE1, _TABLE2} from './constants';
+import {_TABLE1, _TABLE2} from './constants.js';
 
 
 export function list1(date: Date): number[] {

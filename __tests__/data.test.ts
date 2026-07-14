@@ -12,9 +12,9 @@ import {
     testList5UsingDefaultSeed,
     testNum8UsingCustomSeed,
     testNum8UsingDefaultSeed
-} from './helper_data';
-import {indexers, list1, list2, list3, list4, list5, num8} from '../src/data';
-import {_DEFAULT_SEED} from '../src/constants';
+} from './helper_data.js';
+import {indexers, list1, list2, list3, list4, list5, num8} from '../src/data.js';
+import {_DEFAULT_SEED} from '../src/constants.js';
 import {expect, test} from 'vitest';
 
 
