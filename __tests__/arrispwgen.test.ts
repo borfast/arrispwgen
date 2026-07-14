@@ -1,6 +1,6 @@
 import {customSeed, customSeedPotds, defaultSeedPotds, testDates} from './helper_data';
 import * as a from '../src/arrispwgen';
-import {expect, test} from '@jest/globals';
+import {expect, test} from 'vitest';
 
 
 test.each([
