@@ -1,45 +1,45 @@
 {
-  "name": "@borfast/arrispwgen",
-  "version": "5.0.1",
-  "description": "Arris Password of the Day Generator reusable library",
-  "keywords": [
-    "arris",
-    "arrispwd",
-    "arrispwgen",
-    "password-of-the-day",
-    "password of the day"
-  ],
-  "homepage": "https://arrispwgen.borfast.com",
-  "bugs": {
-    "url": "https://github.com/borfast/arrispwgen/issues"
-  },
-  "license": "MIT",
-  "author": "Raúl Santos (https://www.borfast.com)",
-  "main": "./lib/arrispwgen.js",
-  "type": "module",
-  "files": [
-    "/lib",
-    "./lib/arrispwgen.d.ts"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/borfast/arrispwgen.git"
-  },
-  "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "prepublishOnly": "npm run build",
-    "lint": "eslint -c .eslintrc.cjs 'src/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'",
-    "pretest": "npm run lint",
-    "test": "vitest run"
-  },
-  "devDependencies": {
-    "@typescript-eslint/parser": "^2.34.0",
-    "eslint": "^6.8.0",
-    "typescript": "^7.0.2",
-    "vitest": "^4.1.10"
-  },
-  "engines": {
-    "node": ">=13.2.0",
-    "npm": ">=6"
-  }
+    "name": "@borfast/arrispwgen",
+    "version": "5.0.1",
+    "description": "Arris Password of the Day Generator reusable library",
+    "keywords": [
+        "arris",
+        "arrispwd",
+        "arrispwgen",
+        "password-of-the-day",
+        "password of the day"
+    ],
+    "homepage": "https://arrispwgen.borfast.com",
+    "bugs": {
+        "url": "https://github.com/borfast/arrispwgen/issues"
+    },
+    "license": "MIT",
+    "author": "Raúl Santos (https://www.borfast.com)",
+    "main": "./lib/arrispwgen.js",
+    "type": "module",
+    "files": [
+        "/lib",
+        "./lib/arrispwgen.d.ts"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/borfast/arrispwgen.git"
+    },
+    "scripts": {
+        "build": "tsc --project tsconfig.json",
+        "prepublishOnly": "npm run build",
+        "lint": "biome check .",
+        "format": "biome check --write .",
+        "pretest": "npm run lint",
+        "test": "vitest run"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.5.3",
+        "typescript": "^7.0.2",
+        "vitest": "^4.1.10"
+    },
+    "engines": {
+        "node": ">=13.2.0",
+        "npm": ">=6"
+    }
 }
