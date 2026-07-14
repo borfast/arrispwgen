@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import * as a from '../src/arrispwgen.js';
+import * as a from './arrispwgen.js';
 import {
     customSeed,
     customSeedPotds,

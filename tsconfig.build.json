@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "noEmit": false,
+        "rootDir": "./src",
+        "outDir": "./lib",
+        "declaration": true
+    },
+    "exclude": ["src/**/*.test.ts", "src/helper_data.ts"]
+}

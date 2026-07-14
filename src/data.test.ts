@@ -1,14 +1,6 @@
 import { expect, test } from 'vitest';
-import { _DEFAULT_SEED } from '../src/constants.js';
-import {
-    indexers,
-    list1,
-    list2,
-    list3,
-    list4,
-    list5,
-    num8,
-} from '../src/data.js';
+import { _DEFAULT_SEED } from './constants.js';
+import { indexers, list1, list2, list3, list4, list5, num8 } from './data.js';
 import {
     customSeed,
     testDates,
@@ -36,7 +28,7 @@ test('Should generate the correct "list1" for the given dates', () => {
 test.each([
     [_DEFAULT_SEED, testList2UsingDefaultSeed],
     [customSeed, testList2UsingCustomSeed],
-])('Should generate the correct "list2"', (seed: string, expected: string[]) => {
+])('Should generate the correct "list2"', (seed: string, expected: number[]) => {
     const l2 = list2(seed);
     expect(l2).toEqual(expect.arrayContaining(expected));
 });
@@ -86,7 +78,7 @@ test.each([
 test.each([
     [_DEFAULT_SEED, testNum8UsingDefaultSeed],
     [customSeed, testNum8UsingCustomSeed],
-])('Should generate the correct "num8"', (seed: string, expected: number[][]) => {
+])('Should generate the correct "num8"', (seed: string, expected: number[]) => {
     testDates.forEach((date: number, idx: number) => {
         const d = new Date(date);
         const l1 = list1(d);
