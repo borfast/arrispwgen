@@ -12,7 +12,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@borfast/arrispwgen.svg?style=flat)](https://npmjs.org/package/@borfast/arrispwgen)
 ![License](https://img.shields.io/github/license/borfast/arrispwgen)
-[![Build Status](https://travis-ci.org/borfast/arrispwgen.svg?branch=master)](https://travis-ci.org/borfast/arrispwgen)
+[![CI](https://github.com/borfast/arrispwgen/actions/workflows/ci.yml/badge.svg)](https://github.com/borfast/arrispwgen/actions/workflows/ci.yml)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/borfast/arrispwgen/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/borfast/arrispwgen/?branch=master)
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B61NQ8A)
 
