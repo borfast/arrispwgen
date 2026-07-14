@@ -3,6 +3,7 @@ name: Scorecard
 on:
   # Re-evaluate when branch protection / rulesets change.
   branch_protection_rule:
+  workflow_dispatch:
   schedule:
     - cron: '30 6 * * 1'
   push:
