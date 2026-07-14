@@ -10,7 +10,7 @@ import {
 test.each([
     [defaultSeedPotds],
     [customSeedPotds, customSeed],
-])('Should 22222 generate the correct password for the given days with the given seed', (potd: string[], seed:
+])('Should generate the correct password for the given days with the given seed', (potd: string[], seed:
     | string
     | undefined = undefined) => {
     testDates.forEach((date, i) => {

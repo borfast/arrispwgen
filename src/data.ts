@@ -2,7 +2,7 @@ import { _TABLE1, _TABLE2 } from './constants.js';
 
 export function list1(date: Date): number[] {
     // Last two digits of the year
-    const year = parseInt(date.getFullYear().toString(10).substr(2, 2), 10);
+    const year = date.getFullYear() % 100;
 
     // Number of the month. The month in a Date object is zero-indexed,
     // i.e., January == 0, so we add 1 to satisfy the algorithm.
