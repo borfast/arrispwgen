@@ -15,11 +15,18 @@
     },
     "license": "MIT",
     "author": "Raúl Santos (https://www.borfast.com)",
-    "main": "./lib/arrispwgen.js",
     "type": "module",
+    "main": "./lib/arrispwgen.js",
+    "types": "./lib/arrispwgen.d.ts",
+    "exports": {
+        ".": {
+            "types": "./lib/arrispwgen.d.ts",
+            "default": "./lib/arrispwgen.js"
+        }
+    },
+    "sideEffects": false,
     "files": [
-        "/lib",
-        "./lib/arrispwgen.d.ts"
+        "lib"
     ],
     "repository": {
         "type": "git",
@@ -39,7 +46,6 @@
         "vitest": "^4.1.10"
     },
     "engines": {
-        "node": ">=13.2.0",
-        "npm": ">=6"
+        "node": ">=24.18.0"
     }
 }
