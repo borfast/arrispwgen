@@ -7,17 +7,15 @@ import {
     testDates,
 } from './helper_data.js';
 
-test.each([
-    [defaultSeedPotds],
-    [customSeedPotds, customSeed],
-])('Should generate the correct password for the given days with the given seed', (potd: string[], seed:
-    | string
-    | undefined = undefined) => {
-    testDates.forEach((date, i) => {
-        const password = a.generate(new Date(date), seed);
-        expect(password).toBe(potd[i]);
-    });
-});
+test.each([[defaultSeedPotds], [customSeedPotds, customSeed]])(
+    'Should generate the correct password for the given days with the given seed',
+    (potd: string[], seed: string | undefined = undefined) => {
+        testDates.forEach((date, i) => {
+            const password = a.generate(new Date(date), seed);
+            expect(password).toBe(potd[i]);
+        });
+    },
+);
 
 test('Should throw an exception if start date is after end date', () => {
     const fn = () => {
@@ -42,19 +40,22 @@ test.each([
     [defaultSeedPotds, 4, 6],
     [customSeedPotds, 0, 3, customSeed],
     [customSeedPotds, 4, 6, customSeed],
-])('Should generate the correct passwords for the given date interval', (potdList: string[], startIndex: number, endIndex: number, seed:
-    | string
-    | undefined = undefined) => {
-    const count = endIndex - startIndex + 1;
-    const startDate = new Date(testDates[startIndex]);
-    const endDate = new Date(testDates[endIndex]);
-    const potd = a.generate_multi(startDate, endDate, seed);
+])(
+    'Should generate the correct passwords for the given date interval',
+    (potdList: string[], startIndex: number, endIndex: number, seed:
+        | string
+        | undefined = undefined) => {
+        const count = endIndex - startIndex + 1;
+        const startDate = new Date(testDates[startIndex]);
+        const endDate = new Date(testDates[endIndex]);
+        const potd = a.generate_multi(startDate, endDate, seed);
 
-    expect(potd.length).toBe(count);
-    for (let i = startIndex; i <= endIndex; i++) {
-        const date = potd[i - startIndex].date;
-        const password = potd[i - startIndex].password;
-        expect(date).toEqual(new Date(testDates[i]));
-        expect(password).toBe(potdList[i]);
-    }
-});
+        expect(potd.length).toBe(count);
+        for (let i = startIndex; i <= endIndex; i++) {
+            const date = potd[i - startIndex].date;
+            const password = potd[i - startIndex].password;
+            expect(date).toEqual(new Date(testDates[i]));
+            expect(password).toBe(potdList[i]);
+        }
+    },
+);
