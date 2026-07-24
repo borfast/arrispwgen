@@ -39,7 +39,8 @@
         "format": "biome check --write .",
         "typecheck": "tsc --noEmit",
         "pretest": "npm run lint && npm run typecheck",
-        "test": "vitest run"
+        "test": "vitest run",
+        "test:coverage": "vitest run --coverage"
     },
     "devDependencies": {
         "@biomejs/biome": "^2.5.4",
