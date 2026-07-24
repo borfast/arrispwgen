@@ -25,11 +25,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-      - run: npm ci
+      # --ignore-scripts stops dependency lifecycle scripts from executing in CI.
+      - run: npm ci --ignore-scripts
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run build
-      - run: npx vitest run --coverage
+      # Run the lockfile-pinned vitest via an npm script; `npx vitest` would
+      # resolve an unverified version from the registry at run time.
+      - run: npm run test:coverage
       - uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
         if: matrix.node-version == '24'
         with:
@@ -45,8 +48,9 @@ jobs:
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
           bun-version: latest
-      - run: bun install --frozen-lockfile
+      - run: bun install --frozen-lockfile --ignore-scripts
       - run: bun run lint
       - run: bun run typecheck
       - run: bun run build
-      - run: bunx vitest run
+      # As above: use the lockfile-pinned vitest instead of `bunx vitest`.
+      - run: bun run test

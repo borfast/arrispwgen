@@ -22,10 +22,15 @@ jobs:
           node-version: 24
           cache: npm
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
+      # --ignore-scripts stops dependency lifecycle scripts from executing in a
+      # job that holds an id-token for npm trusted publishing.
+      - run: npm ci --ignore-scripts
       - run: npm run lint
       - run: npm run typecheck
-      - run: npx vitest run
+      # Run the lockfile-pinned vitest via an npm script; `npx vitest` would
+      # resolve an unverified version from the registry at run time.
+      - run: npm run test:coverage
       # prepublishOnly builds dist/; provenance is attached automatically
       # when publishing via a configured npm trusted publisher.
+      # Note: no --ignore-scripts here, or prepublishOnly would not build dist/.
       - run: npm publish
