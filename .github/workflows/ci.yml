@@ -33,7 +33,7 @@ jobs:
       # Run the lockfile-pinned vitest via an npm script; `npx vitest` would
       # resolve an unverified version from the registry at run time.
       - run: npm run test:coverage
-      - uses: codecov/codecov-action@0b35c9ecc4f0529d0eb674914510c22f85b196b4 # v7.1.0
+      - uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
         if: matrix.node-version == '24'
         with:
           use_oidc: true
