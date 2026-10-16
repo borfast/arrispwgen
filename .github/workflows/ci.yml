@@ -21,7 +21,7 @@ jobs:
         node-version: ['24', 'latest']
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
@@ -33,7 +33,7 @@ jobs:
       # Run the lockfile-pinned vitest via an npm script; `npx vitest` would
       # resolve an unverified version from the registry at run time.
       - run: npm run test:coverage
-      - uses: codecov/codecov-action@0b35c9ecc4f0529d0eb674914510c22f85b196b4 # v7.1.0
+      - uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
         if: matrix.node-version == '24'
         with:
           use_oidc: true
